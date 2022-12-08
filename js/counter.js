@@ -1,43 +1,35 @@
-let counterDisplayElem = document.querySelector('.counter-display');
-let counterMinusElem = document.querySelector('.counter-minus');
-let counterPlusElem = document.querySelector('.counter-plus');
-
-let count = 50;
-
-function updateDisplay(){
-    counterDisplayElem.innerHTML = count;
+const increasePrice = (element) => {
+  const currentValue = Number(element.value);
+  element.value = currentValue + 10;
 };
 
-counterPlusElem.addEventListener("click",()=>{
-    count = parseInt(count) + 10;
-    updateDisplay();
-});
-
-counterMinusElem.addEventListener("click",()=>{
-    count = parseInt(count) - 10;
-    updateDisplay();
-});
-
-// 250
-
-let counterDisplayElem2 = document.querySelector('.counter-display2');
-let counterMinusElem2 = document.querySelector('.counter-minus2');
-let counterPlusElem2 = document.querySelector('.counter-plus2');
-
-let count2 = 250;
-
-function updateDisplay2(){
-    counterDisplayElem2.innerHTML = count2;
+const decreasePrice = (element) => {
+  const currentValue = Number(element.value);
+  element.value = currentValue - 10;
 };
 
-counterPlusElem2.addEventListener("click",()=>{
-    count2 = parseInt(count2) + 10;
-    updateDisplay2();
+const counterDisplayElem = document.querySelector(".counter-display");
+const counterMinusElem = document.querySelector(".counter-minus");
+const counterPlusElem = document.querySelector(".counter-plus");
+
+counterPlusElem.addEventListener("click", () => {
+  increasePrice(counterDisplayElem);
 });
 
-counterMinusElem2.addEventListener("click",()=>{
-    count2 = parseInt(count2) - 10;
-    updateDisplay2();
+counterMinusElem.addEventListener("click", () => {
+  if (counterDisplayElem.value <= 50) return;
+  decreasePrice(counterDisplayElem);
 });
 
+const counterDisplayElem2 = document.querySelector(".counter-display2");
+const counterMinusElem2 = document.querySelector(".counter-minus2");
+const counterPlusElem2 = document.querySelector(".counter-plus2");
 
+counterPlusElem2.addEventListener("click", () => {
+  increasePrice(counterDisplayElem2);
+});
+
+counterMinusElem2.addEventListener("click", () => {
+  if (counterDisplayElem.value <= 250) return;
+  decreasePrice(counterDisplayElem2);
+});
