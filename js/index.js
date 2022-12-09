@@ -1,3 +1,5 @@
+
+
 const increasePrice = (element) => {
   const currentValue = Number(element.value);
   element.value = currentValue + 10;
