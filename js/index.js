@@ -1,5 +1,3 @@
-
-
 const increasePrice = (element) => {
   const currentValue = Number(element.value);
   element.value = currentValue + 10;
@@ -36,18 +34,19 @@ counterMinusElem2.addEventListener("click", () => {
   decreasePrice(counterDisplayElem2);
 });
 
+const cart = document.querySelector("#cart-container");
+const cartV2 = document.querySelector("#cart-container-v2");
 
-
-
-
-
-const parent = document.querySelector("#cart-container");
 const btnAddToCart = document.querySelector("#btn-add-to-cart");
 const btnAddTocartV2 = document.querySelector("#btn-add-to-cart-v2");
 
 const deliveryPriceContainer = document.querySelector("#cart-delivery-price");
 const deliveryPrice = deliveryPriceContainer.querySelector(".delivery-price");
+const deliveryPriceV2 = document.querySelector(".delivery-price-v2");
+
 const totalPrice = document.querySelector("#total-price");
+const totalPriceV2 = document.querySelector("#total-price-v2");
+
 const sendNormalText = `Voucher z wysyłką na wskazany
 przez Ciebie adres`;
 const sendNormalTextWithBox = `Voucher z wysyłką na wskazany
@@ -92,6 +91,7 @@ const setDeliveryPrice = (price) => {
   checkedDelivery = getSelectedVoucher();
   if (price >= 400 || checkedDelivery === "electronic") {
     deliveryPrice.textContent = `${0} zł`;
+    deliveryPriceV2.textContent = `${0} zł`;
   }
 };
 
@@ -119,6 +119,7 @@ const addToCart = () => {
   CART_STATE.push(voucher);
 
   totalPrice.textContent = calculatePrice();
+  totalPriceV2.textContent = totalPrice.textContent;
 
   render();
 };
@@ -130,7 +131,7 @@ const addToCart2 = () => {
   CART_STATE.push(voucher);
 
   totalPrice.textContent = calculatePrice();
-
+  totalPriceV2.textContent = totalPrice.textContent;
   render();
 };
 
@@ -144,17 +145,36 @@ const createProduct = (text, price) => {
 
 const createOrders = (name, price, id) => {
   const childParentContainer = document.createElement("div");
+  const childContainer = document.createElement("div");
+
   childParentContainer.classList.add("cart-container__item");
+  childContainer.classList.add("cart-container__childContainer");
   const childParentName = createNameParagraph(name);
   const childParentPrice = createPrice(price);
   const trash = createRemovedButton();
-  trash.id = id;
 
+  trash.id = id;
   trash.addEventListener("click", removedOrders);
 
-  parent.append(childParentContainer);
+  childContainer.append(trash, childParentPrice);
 
-  childParentContainer.append(childParentName, trash, childParentPrice);
+  return { childParentContainer, childParentName, childContainer };
+};
+
+const appendOrdersToCart = (name, price, id) => {
+  const { childParentContainer, childParentName, childContainer } =
+    createOrders(name, price, id);
+
+  cart.append(childParentContainer);
+  childParentContainer.append(childParentName, childContainer);
+};
+
+const appendOrdersToCartV2 = (name, price, id) => {
+  const { childParentContainer, childParentName, childContainer } =
+    createOrders(name, price, id);
+
+  cartV2.append(childParentContainer);
+  childParentContainer.append(childParentName, childContainer);
 };
 
 const removedOrders = (e) => {
@@ -164,9 +184,14 @@ const removedOrders = (e) => {
 };
 
 const render = () => {
-  parent.textContent = " ";
+  cart.textContent = " ";
+  cartV2.textContent = " ";
+
   CART_STATE.map((item) => {
-    createOrders(item.name, item.price, item.id);
+    appendOrdersToCart(item.name, item.price, item.id);
+  });
+  CART_STATE.map((item) => {
+    appendOrdersToCartV2(item.name, item.price, item.id);
   });
 };
 
@@ -177,5 +202,3 @@ btnAddToCart.addEventListener("click", () => {
 btnAddTocartV2.addEventListener("click", () => {
   addToCart2();
 });
-
-
