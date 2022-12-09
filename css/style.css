@@ -32,26 +32,6 @@
   color: white;
 }
 
-.voucher-selected {
-  display: flex;
-}
-#cart-container {
-  display: flex;
-  flex-direction: column;
-}
-#cart-container .middle-price .cart-row {
-  gap: 5rem;
-}
-.cart-container__item {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
-}
-.hidden {
-  display: none;
-}
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -323,7 +303,7 @@ html::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 47% 47% 0 0;
 }
 .team .slide-container .name {
@@ -341,11 +321,11 @@ html::-webkit-scrollbar-thumb {
   margin-top: 2rem;
 }
 .team .slide-container .swiper-navBtn {
-  color: #6e93f7;
+  color: #6E93f7;
   transition: color 0.3s ease;
 }
 .team .slide-container .swiper-navBtn:hover {
-  color: #4070f4;
+  color: #4070F4;
 }
 .team .slide-container .swiper-navBtn::before,
 .team .slide-container .swiper-navBtn::after {
@@ -435,7 +415,7 @@ html::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   opacity: 1;
 }
 .select-category .services .img-container img:hover {
@@ -472,7 +452,7 @@ html::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .select-category .btn {
   border: solid black 3px;
@@ -643,7 +623,7 @@ html::-webkit-scrollbar-thumb {
   display: block;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   margin: auto 0;
   transform: translateY(-50%);
 }
@@ -758,19 +738,13 @@ html::-webkit-scrollbar-thumb {
 .voucher-type .wrapper .shopping-cart .heading i {
   font-size: 3rem;
 }
-.voucher-type .wrapper .shopping-cart .up-price,
-.voucher-type .wrapper .shopping-cart .middle-price,
-.voucher-type .wrapper .shopping-cart .middle-price-delivery,
-.voucher-type .wrapper .shopping-cart .bottom-price-sum {
+.voucher-type .wrapper .shopping-cart .up-price, .voucher-type .wrapper .shopping-cart .middle-price, .voucher-type .wrapper .shopping-cart .middle-price-delivery, .voucher-type .wrapper .shopping-cart .bottom-price-sum {
   display: flex;
   justify-content: space-between;
   gap: 16rem;
   font-size: 2rem;
 }
-.voucher-type .wrapper .shopping-cart .up-price p,
-.voucher-type .wrapper .shopping-cart .middle-price p,
-.voucher-type .wrapper .shopping-cart .middle-price-delivery p,
-.voucher-type .wrapper .shopping-cart .bottom-price-sum p {
+.voucher-type .wrapper .shopping-cart .up-price p, .voucher-type .wrapper .shopping-cart .middle-price p, .voucher-type .wrapper .shopping-cart .middle-price-delivery p, .voucher-type .wrapper .shopping-cart .bottom-price-sum p {
   font-family: "typold";
 }
 .voucher-type .wrapper .shopping-cart .up-price {
@@ -779,6 +753,18 @@ html::-webkit-scrollbar-thumb {
 }
 .voucher-type .wrapper .shopping-cart .middle-price {
   margin-top: 3rem;
+}
+.voucher-type .wrapper .shopping-cart .middle-price .cart-container__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.voucher-type .wrapper .shopping-cart .middle-price .cart-container__item p.cart-container__orders__name {
+  max-width: 50%;
+}
+.voucher-type .wrapper .shopping-cart .middle-price .cart-container__item i {
+  cursor: pointer;
+  font-size: 1.8rem;
 }
 .voucher-type .wrapper .shopping-cart .middle-price p {
   line-height: 180%;
@@ -815,12 +801,15 @@ html::-webkit-scrollbar-thumb {
   background-color: #d8ccc4;
   color: white;
 }
-.voucher-type .wrapper .voucher {
+.voucher-type .wrapper .voucher-selected {
+  display: flex;
+}
+.voucher-type .wrapper .voucher-selected .voucher {
   background-color: #d8ccc4;
   margin-left: 8rem;
   border-radius: 44% 44% 0 0;
 }
-.voucher-type .wrapper .voucher .wrapper {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -835,7 +824,7 @@ html::-webkit-scrollbar-thumb {
   /* Show the indicator (dot/circle) when checked */
   /* Style the indicator (dot/circle) */
 }
-.voucher-type .wrapper .voucher .wrapper h3 {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper h3 {
   margin-top: 7rem;
   line-height: 110%;
   color: #231f20;
@@ -843,7 +832,7 @@ html::-webkit-scrollbar-thumb {
   text-align: center;
   color: white;
 }
-.voucher-type .wrapper .voucher .wrapper p {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper p {
   margin-top: 5rem;
   font-size: 2.2rem;
   font-family: "typold-light";
@@ -851,28 +840,28 @@ html::-webkit-scrollbar-thumb {
   max-width: 88%;
   line-height: 170%;
 }
-.voucher-type .wrapper .voucher .wrapper p.small {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper p.small {
   font-size: 1.2rem;
 }
-.voucher-type .wrapper .voucher .wrapper label.container input {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper label.container input {
   margin-bottom: 3rem;
   height: 3rem;
   width: 3rem;
   cursor: pointer;
 }
-.voucher-type .wrapper .voucher .wrapper .container {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper .container {
   display: block;
   position: relative;
   cursor: pointer;
   margin-top: 2rem;
 }
-.voucher-type .wrapper .voucher .wrapper .container input {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper .container input {
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.voucher-type .wrapper .voucher .wrapper .checkmark {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -882,24 +871,18 @@ html::-webkit-scrollbar-thumb {
   border-radius: 50%;
   border: white 1px solid !important;
 }
-.voucher-type .wrapper .voucher .wrapper .container input:checked ~ .checkmark {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper .container input:checked ~ .checkmark {
   background-color: #d8ccc4;
 }
-.voucher-type .wrapper .voucher .wrapper .checkmark:after {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-.voucher-type
-  .wrapper
-  .voucher
-  .wrapper
-  .container
-  input:checked
-  ~ .checkmark:after {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper .container input:checked ~ .checkmark:after {
   display: block;
 }
-.voucher-type .wrapper .voucher .wrapper .container .checkmark:after {
+.voucher-type .wrapper .voucher-selected .voucher .wrapper .container .checkmark:after {
   top: 9px;
   left: 9px;
   width: 8px;
@@ -908,38 +891,26 @@ html::-webkit-scrollbar-thumb {
   background: white;
   border: white 1px solid !important;
 }
-.voucher-type .wrapper .voucher-electronic {
+.voucher-type .wrapper .voucher-selected .voucher-electronic {
   border: black solid 1px;
   background-color: white;
 }
-.voucher-type .wrapper .voucher-electronic .wrapper {
+.voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper {
   /* When the radio button is checked, add a color background */
 }
-.voucher-type .wrapper .voucher-electronic .wrapper h3,
-.voucher-type .wrapper .voucher-electronic .wrapper p {
+.voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper h3, .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper p {
   color: #231f20;
 }
-.voucher-type .wrapper .voucher-electronic .wrapper .container .checkmark {
+.voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container .checkmark {
   background-color: white;
   border-radius: 50%;
   border: black 1px solid !important;
 }
-.voucher-type
-  .wrapper
-  .voucher-electronic
-  .wrapper
-  .container
-  .checkmark:after {
+.voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container .checkmark:after {
   background: black;
   border: black 1px solid !important;
 }
-.voucher-type
-  .wrapper
-  .voucher-electronic
-  .wrapper
-  .container
-  input:checked
-  ~ .checkmark {
+.voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container input:checked ~ .checkmark {
   background-color: white;
 }
 
@@ -955,12 +926,11 @@ html::-webkit-scrollbar-thumb {
 .voucher-counter .container .img-container img {
   display: block;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
 }
-.voucher-counter .container .text-container h2,
-.voucher-counter .container .text-container p {
+.voucher-counter .container .text-container h2, .voucher-counter .container .text-container p {
   color: #231f20;
 }
 .voucher-counter .container .text-container p {
@@ -990,12 +960,7 @@ html::-webkit-scrollbar-thumb {
   gap: 2rem;
   margin-top: 2.5rem;
 }
-.voucher-counter .container .text-container .counter-container .counter-display,
-.voucher-counter
-  .container
-  .text-container
-  .counter-container
-  .counter-display2 {
+.voucher-counter .container .text-container .counter-container .counter-display, .voucher-counter .container .text-container .counter-container .counter-display2 {
   display: block;
   border: solid black 1px;
   border-radius: 25px;
@@ -1072,7 +1037,7 @@ html::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 .voucher-counter .right .text-container p.m1 {
   margin-top: 4rem;
@@ -1164,7 +1129,7 @@ html::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   opacity: 1;
 }
 .voucher-select-category .services .wrapper a .img-container .background {
@@ -1175,13 +1140,7 @@ html::-webkit-scrollbar-thumb {
   width: 100%;
   opacity: 0;
 }
-.voucher-select-category
-  .services
-  .wrapper
-  a
-  .img-container
-  .background
-  .img-B {
+.voucher-select-category .services .wrapper a .img-container .background .img-B {
   position: absolute;
   left: 0;
   top: 0;
@@ -1189,7 +1148,7 @@ html::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .voucher-select-category .services .wrapper .bottom-container {
   display: flex;
@@ -1224,13 +1183,7 @@ html::-webkit-scrollbar-thumb {
   background-color: white;
   color: #d8ccc4;
 }
-.voucher-select-category
-  .services
-  .wrapper
-  .bottom-container
-  a
-  .button:hover
-  i {
+.voucher-select-category .services .wrapper .bottom-container a .button:hover i {
   color: #d8ccc4;
 }
 .voucher-select-category .btn {
@@ -1327,97 +1280,22 @@ html::-webkit-scrollbar-thumb {
   width: fit-content;
   margin-bottom: 2rem;
 }
-.order-data .wrapper .big-container .container .left-right-container,
-.order-data .wrapper .big-container .container .bottom-container {
+.order-data .wrapper .big-container .container .left-right-container, .order-data .wrapper .big-container .container .bottom-container {
   display: flex;
   gap: 6rem;
 }
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .left-right-container
-  .inputs
-  .input-container,
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .bottom-container
-  .inputs
-  .input-container {
+.order-data .wrapper .big-container .container .left-right-container .inputs .input-container, .order-data .wrapper .big-container .container .bottom-container .inputs .input-container {
   margin-bottom: 3rem;
 }
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .left-right-container
-  .inputs
-  .input-container
-  input,
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .left-right-container
-  .inputs
-  .input-container
-  label,
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .bottom-container
-  .inputs
-  .input-container
-  input,
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .bottom-container
-  .inputs
-  .input-container
-  label {
+.order-data .wrapper .big-container .container .left-right-container .inputs .input-container input, .order-data .wrapper .big-container .container .left-right-container .inputs .input-container label, .order-data .wrapper .big-container .container .bottom-container .inputs .input-container input, .order-data .wrapper .big-container .container .bottom-container .inputs .input-container label {
   color: #231f20;
   font-family: "typold";
 }
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .left-right-container
-  .inputs
-  .input-container
-  label,
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .bottom-container
-  .inputs
-  .input-container
-  label {
+.order-data .wrapper .big-container .container .left-right-container .inputs .input-container label, .order-data .wrapper .big-container .container .bottom-container .inputs .input-container label {
   font-size: 1.5rem;
   font-family: "typold-bold";
 }
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .left-right-container
-  .inputs
-  .input-container
-  input,
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .bottom-container
-  .inputs
-  .input-container
-  input {
+.order-data .wrapper .big-container .container .left-right-container .inputs .input-container input, .order-data .wrapper .big-container .container .bottom-container .inputs .input-container input {
   margin-top: 1rem;
   width: 36rem;
   height: 5.2rem;
@@ -1428,14 +1306,7 @@ html::-webkit-scrollbar-thumb {
 .order-data .wrapper .big-container .container .bottom-container .inputs {
   width: 100%;
 }
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .bottom-container
-  .inputs
-  .input-container
-  textarea {
+.order-data .wrapper .big-container .container .bottom-container .inputs .input-container textarea {
   margin-top: 1rem;
   width: 100%;
   height: 20rem;
@@ -1445,62 +1316,28 @@ html::-webkit-scrollbar-thumb {
   resize: none;
   color: #231f20;
 }
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .bottom-container
-  .inputs
-  .input-container
-  input#address {
+.order-data .wrapper .big-container .container .bottom-container .inputs .input-container input#address {
   width: 100%;
 }
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .checkbox-container
-  form
-  .input-container {
+.order-data .wrapper .big-container .container .checkbox-container form .input-container {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
 }
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .checkbox-container
-  form
-  .input-container
-  input[type="checkbox"] {
+.order-data .wrapper .big-container .container .checkbox-container form .input-container input[type=checkbox] {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   height: 16px;
   width: 16px;
   border: solid black 1px;
   border-radius: 25px;
   cursor: pointer;
 }
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .checkbox-container
-  form
-  .input-container
-  input[type="checkbox"]:checked {
+.order-data .wrapper .big-container .container .checkbox-container form .input-container input[type=checkbox]:checked {
   background-color: #231f20;
 }
-.order-data
-  .wrapper
-  .big-container
-  .container
-  .checkbox-container
-  form
-  .input-container
-  label {
+.order-data .wrapper .big-container .container .checkbox-container form .input-container label {
   color: #231f20;
   font-family: "typold-bold";
   padding-left: 3rem;
@@ -1542,19 +1379,13 @@ html::-webkit-scrollbar-thumb {
 .order-data .wrapper .shopping-cart .heading i {
   font-size: 3rem;
 }
-.order-data .wrapper .shopping-cart .up-price,
-.order-data .wrapper .shopping-cart .middle-price,
-.order-data .wrapper .shopping-cart .middle-price-delivery,
-.order-data .wrapper .shopping-cart .bottom-price-sum {
+.order-data .wrapper .shopping-cart .up-price, .order-data .wrapper .shopping-cart .middle-price, .order-data .wrapper .shopping-cart .middle-price-delivery, .order-data .wrapper .shopping-cart .bottom-price-sum {
   display: flex;
   justify-content: space-between;
   gap: 16rem;
   font-size: 2rem;
 }
-.order-data .wrapper .shopping-cart .up-price p,
-.order-data .wrapper .shopping-cart .middle-price p,
-.order-data .wrapper .shopping-cart .middle-price-delivery p,
-.order-data .wrapper .shopping-cart .bottom-price-sum p {
+.order-data .wrapper .shopping-cart .up-price p, .order-data .wrapper .shopping-cart .middle-price p, .order-data .wrapper .shopping-cart .middle-price-delivery p, .order-data .wrapper .shopping-cart .bottom-price-sum p {
   font-family: "typold";
 }
 .order-data .wrapper .shopping-cart .up-price {
@@ -1759,7 +1590,7 @@ nav .big-container .container-bot a {
   height: 100%;
   display: block;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .text h1 {
@@ -1788,33 +1619,28 @@ nav .big-container .container-bot a {
 .employees {
   margin-top: 8rem;
 }
-.employees .container-right,
-.employees .container-left {
+.employees .container-right, .employees .container-left {
   display: flex;
   justify-content: flex-end;
   gap: 15rem;
   margin-top: 15rem;
 }
-.employees .container-right .img-container,
-.employees .container-left .img-container {
+.employees .container-right .img-container, .employees .container-left .img-container {
   width: 40vw;
   height: 90vh;
 }
-.employees .container-right .img-container img,
-.employees .container-left .img-container img {
+.employees .container-right .img-container img, .employees .container-left .img-container img {
   width: 100%;
   height: 100%;
   display: block;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
-.employees .container-right .text-container,
-.employees .container-left .text-container {
+.employees .container-right .text-container, .employees .container-left .text-container {
   max-width: 35vw;
   margin-top: 20rem;
 }
-.employees .container-right .text-container h1,
-.employees .container-left .text-container h1 {
+.employees .container-right .text-container h1, .employees .container-left .text-container h1 {
   font-size: 5rem;
   color: #231f20;
   letter-spacing: 0.2rem;
@@ -1822,15 +1648,13 @@ nav .big-container .container-bot a {
   font-size: 5.2rem;
   font-family: "silk-serif-light";
 }
-.employees .container-right .text-container h4,
-.employees .container-left .text-container h4 {
+.employees .container-right .text-container h4, .employees .container-left .text-container h4 {
   margin-top: 1rem;
   font-family: "typold";
   color: #343335;
   font-size: 1.6rem;
 }
-.employees .container-right .text-container p,
-.employees .container-left .text-container p {
+.employees .container-right .text-container p, .employees .container-left .text-container p {
   margin-top: 8rem;
   color: #343335;
   text-align: left;
@@ -1839,22 +1663,17 @@ nav .big-container .container-bot a {
   line-height: 160%;
   margin-bottom: 5rem;
 }
-.employees .container-right .text-container .logo,
-.employees .container-left .text-container .logo {
+.employees .container-right .text-container .logo, .employees .container-left .text-container .logo {
   margin-top: 17rem;
   height: 10vh;
 }
-.employees .container-right .text-container .logo img,
-.employees .container-left .text-container .logo img {
+.employees .container-right .text-container .logo img, .employees .container-left .text-container .logo img {
   height: 100%;
 }
 .employees .container-left {
   flex-direction: row-reverse;
 }
-.employees .container-left .text-container h1,
-.employees .container-left .text-container h4,
-.employees .container-left .text-container p,
-.employees .container-left .text-container .logo {
+.employees .container-left .text-container h1, .employees .container-left .text-container h4, .employees .container-left .text-container p, .employees .container-left .text-container .logo {
   text-align: right;
 }
 .employees .container-left .text-container p {
@@ -1864,33 +1683,28 @@ nav .big-container .container-bot a {
 .cabinet {
   margin-top: 30rem;
 }
-.cabinet .container-right,
-.cabinet .container-left {
+.cabinet .container-right, .cabinet .container-left {
   display: flex;
   justify-content: flex-end;
   gap: 17rem;
   margin-top: 15rem;
 }
-.cabinet .container-right .img-container,
-.cabinet .container-left .img-container {
+.cabinet .container-right .img-container, .cabinet .container-left .img-container {
   width: 50vw;
   height: 55vh;
 }
-.cabinet .container-right .img-container img,
-.cabinet .container-left .img-container img {
+.cabinet .container-right .img-container img, .cabinet .container-left .img-container img {
   width: 100%;
   height: 100%;
   display: block;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
-.cabinet .container-right .text-container,
-.cabinet .container-left .text-container {
+.cabinet .container-right .text-container, .cabinet .container-left .text-container {
   max-width: 27vw;
   margin-top: 10rem;
 }
-.cabinet .container-right .text-container h1,
-.cabinet .container-left .text-container h1 {
+.cabinet .container-right .text-container h1, .cabinet .container-left .text-container h1 {
   font-size: 5rem;
   color: #231f20;
   letter-spacing: 0.2rem;
@@ -1898,8 +1712,7 @@ nav .big-container .container-bot a {
   font-size: 5.2rem;
   font-family: "silk-serif-light";
 }
-.cabinet .container-right .text-container p,
-.cabinet .container-left .text-container p {
+.cabinet .container-right .text-container p, .cabinet .container-left .text-container p {
   margin-top: 8rem;
   color: #343335;
   text-align: left;
@@ -1907,8 +1720,7 @@ nav .big-container .container-bot a {
   font-size: 2rem;
   line-height: 160%;
 }
-.cabinet .container-right .text-container p.gold,
-.cabinet .container-left .text-container p.gold {
+.cabinet .container-right .text-container p.gold, .cabinet .container-left .text-container p.gold {
   margin-top: 6rem;
   color: #d9cdc4;
   text-align: right;
@@ -1918,10 +1730,7 @@ nav .big-container .container-bot a {
 .cabinet .container-left {
   flex-direction: row-reverse;
 }
-.cabinet .container-left .text-container h1,
-.cabinet .container-left .text-container h4,
-.cabinet .container-left .text-container p,
-.cabinet .container-left .text-container .logo {
+.cabinet .container-left .text-container h1, .cabinet .container-left .text-container h4, .cabinet .container-left .text-container p, .cabinet .container-left .text-container .logo {
   text-align: right;
 }
 .cabinet .container-left .text-container p {
@@ -1957,14 +1766,14 @@ nav .big-container .container-bot a {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .cabinet .slide-container .swiper-navBtn {
-  color: #6e93f7;
+  color: #6E93f7;
   transition: color 0.3s ease;
 }
 .cabinet .slide-container .swiper-navBtn:hover {
-  color: #4070f4;
+  color: #4070F4;
 }
 .cabinet .slide-container .swiper-navBtn::before,
 .cabinet .slide-container .swiper-navBtn::after {
@@ -1990,33 +1799,28 @@ nav .big-container .container-bot a {
   background-size: cover;
   background-repeat: repeat;
 }
-.offer .container-right,
-.offer .container-left {
+.offer .container-right, .offer .container-left {
   display: flex;
   justify-content: flex-end;
   gap: 20rem;
   margin-top: 12rem;
   padding-bottom: 3rem;
 }
-.offer .container-right .img-container,
-.offer .container-left .img-container {
+.offer .container-right .img-container, .offer .container-left .img-container {
   width: 42vw;
   height: 86vh;
 }
-.offer .container-right .img-container img,
-.offer .container-left .img-container img {
+.offer .container-right .img-container img, .offer .container-left .img-container img {
   width: 100%;
   height: 100%;
   display: block;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
-.offer .container-right .text-container,
-.offer .container-left .text-container {
+.offer .container-right .text-container, .offer .container-left .text-container {
   max-width: 40vw;
 }
-.offer .container-right .text-container h1,
-.offer .container-left .text-container h1 {
+.offer .container-right .text-container h1, .offer .container-left .text-container h1 {
   font-size: 5rem;
   color: white;
   letter-spacing: 0.2rem;
@@ -2024,8 +1828,7 @@ nav .big-container .container-bot a {
   font-size: 9rem;
   font-family: "silk-serif-light";
 }
-.offer .container-right .text-container p,
-.offer .container-left .text-container p {
+.offer .container-right .text-container p, .offer .container-left .text-container p {
   margin-top: 8rem;
   color: white;
   text-align: left;
@@ -2033,8 +1836,7 @@ nav .big-container .container-bot a {
   font-size: 2.2rem;
   line-height: 170%;
 }
-.offer .container-right .text-container button,
-.offer .container-left .text-container button {
+.offer .container-right .text-container button, .offer .container-left .text-container button {
   display: block;
   background-color: transparent;
   border: solid white 1px;
@@ -2042,14 +1844,12 @@ nav .big-container .container-bot a {
   padding: 13rem 13rem;
   margin-top: 7rem;
 }
-.offer .container-right .text-container button .container,
-.offer .container-left .text-container button .container {
+.offer .container-right .text-container button .container, .offer .container-left .text-container button .container {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-.offer .container-right .text-container button .container a,
-.offer .container-left .text-container button .container a {
+.offer .container-right .text-container button .container a, .offer .container-left .text-container button .container a {
   position: absolute;
   top: -20px;
   left: -30px;
@@ -2058,12 +1858,10 @@ nav .big-container .container-bot a {
   font-size: 2rem;
   min-width: 25rem;
 }
-.offer .container-right .text-container button .container a:hover ~ i,
-.offer .container-left .text-container button .container a:hover ~ i {
+.offer .container-right .text-container button .container a:hover ~ i, .offer .container-left .text-container button .container a:hover ~ i {
   left: 20px;
 }
-.offer .container-right .text-container button .container i,
-.offer .container-left .text-container button .container i {
+.offer .container-right .text-container button .container i, .offer .container-left .text-container button .container i {
   position: absolute;
   top: 40px;
   left: -10px;
@@ -2079,8 +1877,7 @@ nav .big-container .container-bot a {
   margin-left: 10rem;
 }
 
-.suggestions .container-right,
-.suggestions .container-left {
+.suggestions .container-right, .suggestions .container-left {
   display: flex;
   justify-content: flex-end;
   gap: 25rem;
@@ -2088,34 +1885,29 @@ nav .big-container .container-bot a {
   margin-bottom: 15rem;
   /* hide text */
 }
-.suggestions .container-right .img-container,
-.suggestions .container-left .img-container {
+.suggestions .container-right .img-container, .suggestions .container-left .img-container {
   width: 42vw;
   height: 86vh;
 }
-.suggestions .container-right .img-container img,
-.suggestions .container-left .img-container img {
+.suggestions .container-right .img-container img, .suggestions .container-left .img-container img {
   width: 100%;
   height: 100%;
   display: block;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
-.suggestions .container-right .question,
-.suggestions .container-left .question {
+.suggestions .container-right .question, .suggestions .container-left .question {
   margin-bottom: 6rem;
   /* hide text */
 }
-.suggestions .container-right .question .question-title,
-.suggestions .container-left .question .question-title {
+.suggestions .container-right .question .question-title, .suggestions .container-left .question .question-title {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   text-transform: capitalize;
   padding-bottom: 1rem;
 }
-.suggestions .container-right .question .question-title h2,
-.suggestions .container-left .question .question-title h2 {
+.suggestions .container-right .question .question-title h2, .suggestions .container-left .question .question-title h2 {
   font-size: 5rem;
   color: #231f20;
   letter-spacing: 0.2rem;
@@ -2125,8 +1917,7 @@ nav .big-container .container-bot a {
   margin-bottom: 8rem;
   text-transform: none;
 }
-.suggestions .container-right .question .question-title .question-btn,
-.suggestions .container-left .question .question-title .question-btn {
+.suggestions .container-right .question .question-title .question-btn, .suggestions .container-left .question .question-title .question-btn {
   display: flex;
   justify-content: flex-end;
   gap: 2rem;
@@ -2137,42 +1928,34 @@ nav .big-container .container-bot a {
   color: black;
   margin-top: 6rem;
 }
-.suggestions .container-right .question .question-title .question-btn .arrow i,
-.suggestions .container-left .question .question-title .question-btn .arrow i {
+.suggestions .container-right .question .question-title .question-btn .arrow i, .suggestions .container-left .question .question-title .question-btn .arrow i {
   color: black;
   transform: rotate(180deg);
 }
-.suggestions .container-right .question .question-title .question-btn p,
-.suggestions .container-left .question .question-title .question-btn p {
+.suggestions .container-right .question .question-title .question-btn p, .suggestions .container-left .question .question-title .question-btn p {
   color: #231f20;
   font-size: 2rem;
   font-family: "typold-light";
   text-transform: none;
 }
-.suggestions .container-right .question .question-title .question-btn .show-p,
-.suggestions .container-left .question .question-title .question-btn .show-p {
+.suggestions .container-right .question .question-title .question-btn .show-p, .suggestions .container-left .question .question-title .question-btn .show-p {
   display: block;
 }
-.suggestions .container-right .question .question-title .question-btn .hidden-p,
-.suggestions .container-left .question .question-title .question-btn .hidden-p {
+.suggestions .container-right .question .question-title .question-btn .hidden-p, .suggestions .container-left .question .question-title .question-btn .hidden-p {
   display: none;
 }
-.suggestions .container-right .question .question-title .rotate,
-.suggestions .container-left .question .question-title .rotate {
+.suggestions .container-right .question .question-title .rotate, .suggestions .container-left .question .question-title .rotate {
   transform: rotate(180deg);
 }
-.suggestions .container-right .question .wrapper,
-.suggestions .container-left .question .wrapper {
+.suggestions .container-right .question .wrapper, .suggestions .container-left .question .wrapper {
   display: flex;
   flex-direction: column;
 }
-.suggestions .container-right .question .wrapper .column .p-container,
-.suggestions .container-left .question .wrapper .column .p-container {
+.suggestions .container-right .question .wrapper .column .p-container, .suggestions .container-left .question .wrapper .column .p-container {
   display: flex;
   gap: 10rem;
 }
-.suggestions .container-right .question .wrapper .column .p-container a p,
-.suggestions .container-left .question .wrapper .column .p-container a p {
+.suggestions .container-right .question .wrapper .column .p-container a p, .suggestions .container-left .question .wrapper .column .p-container a p {
   color: #231f20;
   font-size: 2rem;
   font-family: "typold-light";
@@ -2182,28 +1965,22 @@ nav .big-container .container-bot a {
   min-width: 221px;
   max-width: 221px;
 }
-.suggestions .container-right .question .question-text,
-.suggestions .container-left .question .question-text {
+.suggestions .container-right .question .question-text, .suggestions .container-left .question .question-text {
   display: none;
 }
-.suggestions .container-right .question-text,
-.suggestions .container-left .question-text {
+.suggestions .container-right .question-text, .suggestions .container-left .question-text {
   display: none;
 }
-.suggestions .container-right .show-text .question-text,
-.suggestions .container-left .show-text .question-text {
+.suggestions .container-right .show-text .question-text, .suggestions .container-left .show-text .question-text {
   display: flex;
 }
-.suggestions .container-right .minus-icon,
-.suggestions .container-left .minus-icon {
+.suggestions .container-right .minus-icon, .suggestions .container-left .minus-icon {
   display: none;
 }
-.suggestions .container-right .show-text .minus-icon,
-.suggestions .container-left .show-text .minus-icon {
+.suggestions .container-right .show-text .minus-icon, .suggestions .container-left .show-text .minus-icon {
   display: inline;
 }
-.suggestions .container-right .show-text .plus-icon,
-.suggestions .container-left .show-text .plus-icon {
+.suggestions .container-right .show-text .plus-icon, .suggestions .container-left .show-text .plus-icon {
   display: none;
 }
 .suggestions .container-left {
@@ -2266,13 +2043,7 @@ nav .big-container .container-bot a {
   cursor: pointer;
   color: black;
 }
-.price-list
-  .price-list-container
-  .question
-  .question-title
-  .question-btn
-  .arrow
-  i {
+.price-list .price-list-container .question .question-title .question-btn .arrow i {
   color: white;
 }
 .price-list .price-list-container .question .question-title .rotate {
@@ -2305,66 +2076,26 @@ nav .big-container .container-bot a {
   line-height: 150%;
   width: 10rem;
 }
-.price-list
-  .price-list-container
-  .question
-  .question-text
-  .category
-  .two
-  .p-container {
+.price-list .price-list-container .question .question-text .category .two .p-container {
   display: flex;
 }
-.price-list
-  .price-list-container
-  .question
-  .question-text
-  .category
-  .two
-  .p-container
-  p {
+.price-list .price-list-container .question .question-text .category .two .p-container p {
   font-size: 2rem;
   color: #c5c8cd;
   font-family: "typold-light";
   min-width: 8rem;
 }
-.price-list
-  .price-list-container
-  .question
-  .question-text
-  .category
-  .two
-  .p-container
-  .procedure {
+.price-list .price-list-container .question .question-text .category .two .p-container .procedure {
   min-width: 40rem;
 }
-.price-list
-  .price-list-container
-  .question
-  .question-text
-  .category
-  .two
-  .p-container
-  .package {
+.price-list .price-list-container .question .question-text .category .two .p-container .package {
   margin-left: 24rem;
 }
-.price-list
-  .price-list-container
-  .question
-  .question-text
-  .category
-  .two
-  .p-container
-  .price {
+.price-list .price-list-container .question .question-text .category .two .p-container .price {
   margin-left: 16rem;
   font-family: "typold-bold";
 }
-.price-list
-  .price-list-container
-  .question
-  .question-text
-  .category
-  .two
-  .mobile-show {
+.price-list .price-list-container .question .question-text .category .two .mobile-show {
   display: none;
 }
 .price-list .price-list-container .question-text {
@@ -2493,7 +2224,7 @@ nav .big-container .container-bot a {
   height: 100%;
   display: block;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .procedure-desc .container-left .text-container {
   max-width: 40vw;
@@ -2611,14 +2342,7 @@ nav .big-container .container-bot a {
   font-size: 2rem;
   min-width: 25rem;
 }
-.procedure-desc
-  .recomendations
-  .button-container
-  .wrapper
-  button
-  .container
-  a:hover
-  ~ i {
+.procedure-desc .recomendations .button-container .wrapper button .container a:hover ~ i {
   left: 20px;
 }
 .procedure-desc .recomendations .button-container .wrapper button .container i {
@@ -2710,7 +2434,7 @@ nav .big-container .container-bot a {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .contact .content-container {
   margin-top: 10rem;
@@ -2756,7 +2480,7 @@ nav .big-container .container-bot a {
   height: 100%;
   display: block;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .contact .container-right .text-container {
   max-width: 40vw;
@@ -2851,7 +2575,7 @@ nav .big-container .container-bot a {
   width: 100%;
   display: block;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .news .wrapper .piece-of-news h2 {
   margin-top: 8rem;
@@ -2932,7 +2656,7 @@ nav .big-container .container-bot a {
   width: 100%;
   display: block;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .article .wrapper .piece-of-news h2 {
   margin-top: 8rem;
@@ -3214,7 +2938,7 @@ nav .big-container .container-bot a {
     overflow: hidden;
   }
   .team .slide-container .image-content,
-  .team .slide-container .card-content {
+.team .slide-container .card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3234,7 +2958,7 @@ nav .big-container .container-bot a {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     border-radius: 47% 47% 0 0;
   }
   .team .slide-container .name {
@@ -3367,23 +3091,14 @@ nav .big-container .container-bot a {
   .voucher-type .wrapper .shopping-cart .heading i {
     font-size: 2.7rem;
   }
-  .voucher-type .wrapper .shopping-cart .up-price,
-  .voucher-type .wrapper .shopping-cart .middle-price,
-  .voucher-type .wrapper .shopping-cart .middle-price-delivery,
-  .voucher-type .wrapper .shopping-cart .bottom-price-sum {
+  .voucher-type .wrapper .shopping-cart .up-price, .voucher-type .wrapper .shopping-cart .middle-price, .voucher-type .wrapper .shopping-cart .middle-price-delivery, .voucher-type .wrapper .shopping-cart .bottom-price-sum {
     gap: 0rem;
     font-size: 2rem;
   }
-  .voucher-type .wrapper .shopping-cart .up-price p,
-  .voucher-type .wrapper .shopping-cart .middle-price p,
-  .voucher-type .wrapper .shopping-cart .middle-price-delivery p,
-  .voucher-type .wrapper .shopping-cart .bottom-price-sum p {
+  .voucher-type .wrapper .shopping-cart .up-price p, .voucher-type .wrapper .shopping-cart .middle-price p, .voucher-type .wrapper .shopping-cart .middle-price-delivery p, .voucher-type .wrapper .shopping-cart .bottom-price-sum p {
     font-size: 1.6rem;
   }
-  .voucher-type .wrapper .shopping-cart .up-price p.mar-left,
-  .voucher-type .wrapper .shopping-cart .middle-price p.mar-left,
-  .voucher-type .wrapper .shopping-cart .middle-price-delivery p.mar-left,
-  .voucher-type .wrapper .shopping-cart .bottom-price-sum p.mar-left {
+  .voucher-type .wrapper .shopping-cart .up-price p.mar-left, .voucher-type .wrapper .shopping-cart .middle-price p.mar-left, .voucher-type .wrapper .shopping-cart .middle-price-delivery p.mar-left, .voucher-type .wrapper .shopping-cart .bottom-price-sum p.mar-left {
     margin-left: 4rem;
   }
   .voucher-type .wrapper .shopping-cart .up-price {
@@ -3410,11 +3125,11 @@ nav .big-container .container-bot a {
     border-radius: 25px;
     font-size: 1.6rem;
   }
-  .voucher-type .wrapper .voucher {
+  .voucher-type .wrapper .voucher-selected .voucher {
     margin-left: 8rem;
     border-radius: 44% 44% 0 0;
   }
-  .voucher-type .wrapper .voucher .wrapper {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3429,13 +3144,13 @@ nav .big-container .container-bot a {
     /* Show the indicator (dot/circle) when checked */
     /* Style the indicator (dot/circle) */
   }
-  .voucher-type .wrapper .voucher .wrapper h3 {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper h3 {
     margin-top: 7rem;
     font-size: 2.8rem;
     text-align: center;
     color: white;
   }
-  .voucher-type .wrapper .voucher .wrapper p {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper p {
     margin-top: 5rem;
     font-size: 1.7rem;
     font-family: "typold-light";
@@ -3443,28 +3158,28 @@ nav .big-container .container-bot a {
     max-width: 88%;
     line-height: 170%;
   }
-  .voucher-type .wrapper .voucher .wrapper p.small {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper p.small {
     font-size: 1.2rem;
   }
-  .voucher-type .wrapper .voucher .wrapper label.container input {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper label.container input {
     margin-bottom: 3rem;
     height: 3rem;
     width: 3rem;
     cursor: pointer;
   }
-  .voucher-type .wrapper .voucher .wrapper .container {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container {
     display: block;
     position: relative;
     cursor: pointer;
     margin-top: 2rem;
   }
-  .voucher-type .wrapper .voucher .wrapper .container input {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container input {
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
   }
-  .voucher-type .wrapper .voucher .wrapper .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -3474,30 +3189,18 @@ nav .big-container .container-bot a {
     border-radius: 50%;
     border: white 1px solid !important;
   }
-  .voucher-type
-    .wrapper
-    .voucher
-    .wrapper
-    .container
-    input:checked
-    ~ .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container input:checked ~ .checkmark {
     background-color: #d8ccc4;
   }
-  .voucher-type .wrapper .voucher .wrapper .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
-  .voucher-type
-    .wrapper
-    .voucher
-    .wrapper
-    .container
-    input:checked
-    ~ .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container input:checked ~ .checkmark:after {
     display: block;
   }
-  .voucher-type .wrapper .voucher .wrapper .container .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container .checkmark:after {
     top: 9px;
     left: 9px;
     width: 8px;
@@ -3506,38 +3209,26 @@ nav .big-container .container-bot a {
     background: white;
     border: white 1px solid !important;
   }
-  .voucher-type .wrapper .voucher-electronic {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic {
     border: black solid 1px;
     background-color: white;
   }
-  .voucher-type .wrapper .voucher-electronic .wrapper {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper {
     /* When the radio button is checked, add a color background */
   }
-  .voucher-type .wrapper .voucher-electronic .wrapper h3,
-  .voucher-type .wrapper .voucher-electronic .wrapper p {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper h3, .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper p {
     color: #231f20;
   }
-  .voucher-type .wrapper .voucher-electronic .wrapper .container .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container .checkmark {
     background-color: white;
     border-radius: 50%;
     border: black 1px solid !important;
   }
-  .voucher-type
-    .wrapper
-    .voucher-electronic
-    .wrapper
-    .container
-    .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container .checkmark:after {
     background: black;
     border: black 1px solid !important;
   }
-  .voucher-type
-    .wrapper
-    .voucher-electronic
-    .wrapper
-    .container
-    input:checked
-    ~ .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container input:checked ~ .checkmark {
     background-color: white;
   }
   .voucher-counter .container {
@@ -3551,7 +3242,7 @@ nav .big-container .container-bot a {
   .voucher-counter .container .img-container img {
     display: block;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     height: 100%;
     width: 100%;
   }
@@ -3643,7 +3334,7 @@ nav .big-container .container-bot a {
     width: 100%;
     height: 100%;
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
   .voucher-counter .right .text-container p.m1 {
     margin-top: 4rem;
@@ -3695,12 +3386,7 @@ nav .big-container .container-bot a {
   .voucher-select-category .services .wrapper a {
     cursor: pointer;
   }
-  .voucher-select-category
-    .services
-    .wrapper
-    a:hover
-    .img-container
-    .background {
+  .voucher-select-category .services .wrapper a:hover .img-container .background {
     opacity: 1;
   }
   .voucher-select-category .services .wrapper a .img-container {
@@ -3716,7 +3402,7 @@ nav .big-container .container-bot a {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     opacity: 1;
   }
   .voucher-select-category .services .wrapper a .img-container .background {
@@ -3727,13 +3413,7 @@ nav .big-container .container-bot a {
     width: 100%;
     opacity: 0;
   }
-  .voucher-select-category
-    .services
-    .wrapper
-    a
-    .img-container
-    .background
-    .img-B {
+  .voucher-select-category .services .wrapper a .img-container .background .img-B {
     position: absolute;
     left: 0;
     top: 0;
@@ -3741,7 +3421,7 @@ nav .big-container .container-bot a {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
   .voucher-select-category .services .wrapper .bottom-container {
     display: flex;
@@ -3769,22 +3449,11 @@ nav .big-container .container-bot a {
     padding: 1.7rem 3.6rem;
     font-size: 1.6rem;
   }
-  .voucher-select-category
-    .services
-    .wrapper
-    .bottom-container
-    a
-    .button:hover {
+  .voucher-select-category .services .wrapper .bottom-container a .button:hover {
     background-color: white;
     color: #d8ccc4;
   }
-  .voucher-select-category
-    .services
-    .wrapper
-    .bottom-container
-    a
-    .button:hover
-    i {
+  .voucher-select-category .services .wrapper .bottom-container a .button:hover i {
     color: #d8ccc4;
   }
   .voucher-select-category .btn {
@@ -3845,23 +3514,14 @@ nav .big-container .container-bot a {
   .order-data .wrapper .shopping-cart .heading i {
     font-size: 2.7rem;
   }
-  .order-data .wrapper .shopping-cart .up-price,
-  .order-data .wrapper .shopping-cart .middle-price,
-  .order-data .wrapper .shopping-cart .middle-price-delivery,
-  .order-data .wrapper .shopping-cart .bottom-price-sum {
+  .order-data .wrapper .shopping-cart .up-price, .order-data .wrapper .shopping-cart .middle-price, .order-data .wrapper .shopping-cart .middle-price-delivery, .order-data .wrapper .shopping-cart .bottom-price-sum {
     gap: 0rem;
     font-size: 2rem;
   }
-  .order-data .wrapper .shopping-cart .up-price p,
-  .order-data .wrapper .shopping-cart .middle-price p,
-  .order-data .wrapper .shopping-cart .middle-price-delivery p,
-  .order-data .wrapper .shopping-cart .bottom-price-sum p {
+  .order-data .wrapper .shopping-cart .up-price p, .order-data .wrapper .shopping-cart .middle-price p, .order-data .wrapper .shopping-cart .middle-price-delivery p, .order-data .wrapper .shopping-cart .bottom-price-sum p {
     font-size: 1.6rem;
   }
-  .order-data .wrapper .shopping-cart .up-price p.mar-left,
-  .order-data .wrapper .shopping-cart .middle-price p.mar-left,
-  .order-data .wrapper .shopping-cart .middle-price-delivery p.mar-left,
-  .order-data .wrapper .shopping-cart .bottom-price-sum p.mar-left {
+  .order-data .wrapper .shopping-cart .up-price p.mar-left, .order-data .wrapper .shopping-cart .middle-price p.mar-left, .order-data .wrapper .shopping-cart .middle-price-delivery p.mar-left, .order-data .wrapper .shopping-cart .bottom-price-sum p.mar-left {
     margin-left: 4rem;
   }
   .order-data .wrapper .shopping-cart .up-price {
@@ -3891,82 +3551,67 @@ nav .big-container .container-bot a {
   .text p {
     max-width: 78%;
   }
-  .employees .container-right .text-container,
-  .employees .container-left .text-container {
+  .employees .container-right .text-container, .employees .container-left .text-container {
     margin-top: 10rem;
     max-width: 40vw;
   }
-  .employees .container-right .text-container .logo,
-  .employees .container-left .text-container .logo {
+  .employees .container-right .text-container .logo, .employees .container-left .text-container .logo {
     margin-top: 12rem;
   }
-  .cabinet .container-right,
-  .cabinet .container-left {
+  .cabinet .container-right, .cabinet .container-left {
     gap: 7rem;
   }
-  .cabinet .container-right .text-container,
-  .cabinet .container-left .text-container {
+  .cabinet .container-right .text-container, .cabinet .container-left .text-container {
     margin-top: 4rem;
     max-width: 40vw;
   }
-  .cabinet .container-right .text-container .logo,
-  .cabinet .container-left .text-container .logo {
+  .cabinet .container-right .text-container .logo, .cabinet .container-left .text-container .logo {
     margin-top: 12rem;
   }
-  .cabinet .container-right .img-container,
-  .cabinet .container-left .img-container {
+  .cabinet .container-right .img-container, .cabinet .container-left .img-container {
     height: 64vh;
   }
   .cabinet .slide-container {
     max-width: 94vw;
   }
-  .offer .container-right,
-  .offer .container-left {
+  .offer .container-right, .offer .container-left {
     gap: 12rem;
     margin-top: 15rem;
   }
-  .offer .container-right .img-container,
-  .offer .container-left .img-container {
+  .offer .container-right .img-container, .offer .container-left .img-container {
     width: 42vw;
     height: 98vh;
   }
-  .offer .container-right .img-container img,
-  .offer .container-left .img-container img {
+  .offer .container-right .img-container img, .offer .container-left .img-container img {
     width: 100%;
     height: 100%;
     display: block;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
-  .offer .container-right .text-container,
-  .offer .container-left .text-container {
+  .offer .container-right .text-container, .offer .container-left .text-container {
     max-width: 44vw;
   }
-  .offer .container-right .text-container h1,
-  .offer .container-left .text-container h1 {
+  .offer .container-right .text-container h1, .offer .container-left .text-container h1 {
     font-size: 7rem;
     margin-top: 6rem;
   }
-  .offer .container-right .text-container p,
-  .offer .container-left .text-container p {
+  .offer .container-right .text-container p, .offer .container-left .text-container p {
     margin-top: 4rem;
     font-size: 2rem;
     line-height: 170%;
   }
-  .offer .container-right .text-container button,
-  .offer .container-left .text-container button {
+  .offer .container-right .text-container button, .offer .container-left .text-container button {
     padding: 10rem 10rem;
     margin-top: 7rem;
   }
-  .offer .container-right .text-container button .container a,
-  .offer .container-left .text-container button .container a {
+  .offer .container-right .text-container button .container a, .offer .container-left .text-container button .container a {
     top: -20px;
     left: -30px;
     font-size: 2rem;
     min-width: 25rem;
   }
-  .offer .container-right .text-container button .container i,
-  .offer .container-left .text-container button .container i {
+  .offer .container-right .text-container button .container i, .offer .container-left .text-container button .container i {
     top: 40px;
     left: -10px;
     font-size: 1.8rem;
@@ -3980,8 +3625,7 @@ nav .big-container .container-bot a {
   .offer .container-right .text-container {
     margin-left: 10rem;
   }
-  .suggestions .container-right,
-  .suggestions .container-left {
+  .suggestions .container-right, .suggestions .container-left {
     gap: 15rem;
   }
   .price-list .price-list-container {
@@ -4009,13 +3653,7 @@ nav .big-container .container-bot a {
   .price-list .price-list-container .question .question-title .question-btn {
     font-size: 2rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-title
-    .question-btn
-    .arrow
-    i {
+  .price-list .price-list-container .question .question-title .question-btn .arrow i {
     color: white;
   }
   .price-list .price-list-container .question .question-text .category {
@@ -4028,71 +3666,25 @@ nav .big-container .container-bot a {
     flex-direction: column;
     gap: 1rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .hr {
+  .price-list .price-list-container .question .question-text .category .two .hr {
     width: 10rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .p-container {
+  .price-list .price-list-container .question .question-text .category .two .p-container {
     display: flex;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .p-container
-    p {
+  .price-list .price-list-container .question .question-text .category .two .p-container p {
     font-size: 1.8rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .p-container
-    .procedure {
+  .price-list .price-list-container .question .question-text .category .two .p-container .procedure {
     min-width: 40rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .p-container
-    .package {
+  .price-list .price-list-container .question .question-text .category .two .p-container .package {
     margin-left: 12rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .p-container
-    .price {
+  .price-list .price-list-container .question .question-text .category .two .p-container .price {
     margin-left: 6rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .mobile-show {
+  .price-list .price-list-container .question .question-text .category .two .mobile-show {
     display: none;
   }
   .price-list .price-list-container .question-text {
@@ -4289,13 +3881,7 @@ nav .big-container .container-bot a {
     display: flex;
     flex-direction: column;
   }
-  .procedure-desc
-    .recomendations
-    .button-container
-    .wrapper
-    button
-    .container
-    a {
+  .procedure-desc .recomendations .button-container .wrapper button .container a {
     position: absolute;
     top: -20px;
     left: -30px;
@@ -4304,23 +3890,10 @@ nav .big-container .container-bot a {
     font-size: 2rem;
     min-width: 25rem;
   }
-  .procedure-desc
-    .recomendations
-    .button-container
-    .wrapper
-    button
-    .container
-    a:hover
-    ~ i {
+  .procedure-desc .recomendations .button-container .wrapper button .container a:hover ~ i {
     left: 20px;
   }
-  .procedure-desc
-    .recomendations
-    .button-container
-    .wrapper
-    button
-    .container
-    i {
+  .procedure-desc .recomendations .button-container .wrapper button .container i {
     position: absolute;
     top: 40px;
     left: -10px;
@@ -4366,14 +3939,7 @@ nav .big-container .container-bot a {
     cursor: pointer;
     color: black;
   }
-  .procedure-desc
-    .faq
-    .wrapper
-    .question
-    .question-title
-    .question-btn
-    .arrow
-    i {
+  .procedure-desc .faq .wrapper .question .question-title .question-btn .arrow i {
     color: black;
   }
   .procedure-desc .faq .wrapper .question .question-title .rotate {
@@ -4716,23 +4282,14 @@ nav .big-container .container-bot a {
   .voucher-type .wrapper .shopping-cart .heading i {
     font-size: 2.7rem;
   }
-  .voucher-type .wrapper .shopping-cart .up-price,
-  .voucher-type .wrapper .shopping-cart .middle-price,
-  .voucher-type .wrapper .shopping-cart .middle-price-delivery,
-  .voucher-type .wrapper .shopping-cart .bottom-price-sum {
+  .voucher-type .wrapper .shopping-cart .up-price, .voucher-type .wrapper .shopping-cart .middle-price, .voucher-type .wrapper .shopping-cart .middle-price-delivery, .voucher-type .wrapper .shopping-cart .bottom-price-sum {
     gap: 0rem;
     font-size: 2rem;
   }
-  .voucher-type .wrapper .shopping-cart .up-price p,
-  .voucher-type .wrapper .shopping-cart .middle-price p,
-  .voucher-type .wrapper .shopping-cart .middle-price-delivery p,
-  .voucher-type .wrapper .shopping-cart .bottom-price-sum p {
+  .voucher-type .wrapper .shopping-cart .up-price p, .voucher-type .wrapper .shopping-cart .middle-price p, .voucher-type .wrapper .shopping-cart .middle-price-delivery p, .voucher-type .wrapper .shopping-cart .bottom-price-sum p {
     font-size: 1.6rem;
   }
-  .voucher-type .wrapper .shopping-cart .up-price p.mar-left,
-  .voucher-type .wrapper .shopping-cart .middle-price p.mar-left,
-  .voucher-type .wrapper .shopping-cart .middle-price-delivery p.mar-left,
-  .voucher-type .wrapper .shopping-cart .bottom-price-sum p.mar-left {
+  .voucher-type .wrapper .shopping-cart .up-price p.mar-left, .voucher-type .wrapper .shopping-cart .middle-price p.mar-left, .voucher-type .wrapper .shopping-cart .middle-price-delivery p.mar-left, .voucher-type .wrapper .shopping-cart .bottom-price-sum p.mar-left {
     margin-left: 4rem;
   }
   .voucher-type .wrapper .shopping-cart .up-price {
@@ -4759,12 +4316,15 @@ nav .big-container .container-bot a {
     border-radius: 25px;
     font-size: 1.6rem;
   }
-  .voucher-type .wrapper .voucher {
+  .voucher-type .wrapper .voucher-selected {
+    flex-direction: column;
+  }
+  .voucher-type .wrapper .voucher-selected .voucher {
     margin-top: 5rem;
     margin-left: 0;
     border-radius: 44% 44% 0 0;
   }
-  .voucher-type .wrapper .voucher .wrapper {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper {
     width: 50vw;
     height: 52rem;
     /* Hide the browser's default radio button */
@@ -4775,38 +4335,38 @@ nav .big-container .container-bot a {
     /* Show the indicator (dot/circle) when checked */
     /* Style the indicator (dot/circle) */
   }
-  .voucher-type .wrapper .voucher .wrapper h3 {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper h3 {
     margin-top: 7rem;
     font-size: 2.8rem;
   }
-  .voucher-type .wrapper .voucher .wrapper p {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper p {
     margin-top: 5rem;
     font-size: 1.7rem;
     max-width: 88%;
     line-height: 170%;
   }
-  .voucher-type .wrapper .voucher .wrapper p.small {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper p.small {
     font-size: 1.2rem;
   }
-  .voucher-type .wrapper .voucher .wrapper label.container input {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper label.container input {
     margin-bottom: 3rem;
     height: 3rem;
     width: 3rem;
     cursor: pointer;
   }
-  .voucher-type .wrapper .voucher .wrapper .container {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container {
     display: block;
     position: relative;
     cursor: pointer;
     margin-top: 2rem;
   }
-  .voucher-type .wrapper .voucher .wrapper .container input {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container input {
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
   }
-  .voucher-type .wrapper .voucher .wrapper .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -4816,30 +4376,18 @@ nav .big-container .container-bot a {
     border-radius: 50%;
     border: white 1px solid !important;
   }
-  .voucher-type
-    .wrapper
-    .voucher
-    .wrapper
-    .container
-    input:checked
-    ~ .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container input:checked ~ .checkmark {
     background-color: #d8ccc4;
   }
-  .voucher-type .wrapper .voucher .wrapper .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
-  .voucher-type
-    .wrapper
-    .voucher
-    .wrapper
-    .container
-    input:checked
-    ~ .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container input:checked ~ .checkmark:after {
     display: block;
   }
-  .voucher-type .wrapper .voucher .wrapper .container .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container .checkmark:after {
     top: 9px;
     left: 9px;
     width: 8px;
@@ -4848,38 +4396,26 @@ nav .big-container .container-bot a {
     background: white;
     border: white 1px solid !important;
   }
-  .voucher-type .wrapper .voucher-electronic {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic {
     border: black solid 1px;
     background-color: white;
   }
-  .voucher-type .wrapper .voucher-electronic .wrapper {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper {
     /* When the radio button is checked, add a color background */
   }
-  .voucher-type .wrapper .voucher-electronic .wrapper h3,
-  .voucher-type .wrapper .voucher-electronic .wrapper p {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper h3, .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper p {
     color: #231f20;
   }
-  .voucher-type .wrapper .voucher-electronic .wrapper .container .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container .checkmark {
     background-color: white;
     border-radius: 50%;
     border: black 1px solid !important;
   }
-  .voucher-type
-    .wrapper
-    .voucher-electronic
-    .wrapper
-    .container
-    .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container .checkmark:after {
     background: black;
     border: black 1px solid !important;
   }
-  .voucher-type
-    .wrapper
-    .voucher-electronic
-    .wrapper
-    .container
-    input:checked
-    ~ .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container input:checked ~ .checkmark {
     background-color: white;
   }
   .voucher-counter .container {
@@ -4895,7 +4431,7 @@ nav .big-container .container-bot a {
   .voucher-counter .container .img-container img {
     display: block;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     height: 100%;
     width: 100%;
   }
@@ -4923,16 +4459,7 @@ nav .big-container .container-bot a {
     gap: 2rem;
     margin-top: 2.5rem;
   }
-  .voucher-counter
-    .container
-    .text-container
-    .counter-container
-    .counter-display,
-  .voucher-counter
-    .container
-    .text-container
-    .counter-container
-    .counter-display2 {
+  .voucher-counter .container .text-container .counter-container .counter-display, .voucher-counter .container .text-container .counter-container .counter-display2 {
     width: 30rem;
     height: 5rem;
     font-size: 2rem;
@@ -4997,7 +4524,7 @@ nav .big-container .container-bot a {
     width: 100%;
     height: 100%;
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
   .voucher-counter .right .text-container p.m1 {
     margin-top: 4rem;
@@ -5065,7 +4592,7 @@ nav .big-container .container-bot a {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     opacity: 1;
   }
   .voucher-select-category .services .wrapper a .img-container .background {
@@ -5076,18 +4603,12 @@ nav .big-container .container-bot a {
     width: 100%;
     opacity: 0;
   }
-  .voucher-select-category
-    .services
-    .wrapper
-    a
-    .img-container
-    .background
-    .img-B {
+  .voucher-select-category .services .wrapper a .img-container .background .img-B {
     display: block;
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
   .voucher-select-category .services .wrapper .bottom-container {
     display: flex;
@@ -5117,22 +4638,11 @@ nav .big-container .container-bot a {
     padding: 1.7rem 3.6rem;
     font-size: 1.6rem;
   }
-  .voucher-select-category
-    .services
-    .wrapper
-    .bottom-container
-    a
-    .button:hover {
+  .voucher-select-category .services .wrapper .bottom-container a .button:hover {
     background-color: white;
     color: #d8ccc4;
   }
-  .voucher-select-category
-    .services
-    .wrapper
-    .bottom-container
-    a
-    .button:hover
-    i {
+  .voucher-select-category .services .wrapper .bottom-container a .button:hover i {
     color: #d8ccc4;
   }
   .voucher-select-category .btn {
@@ -5204,23 +4714,14 @@ nav .big-container .container-bot a {
   .order-data .wrapper .shopping-cart .heading i {
     font-size: 2.7rem;
   }
-  .order-data .wrapper .shopping-cart .up-price,
-  .order-data .wrapper .shopping-cart .middle-price,
-  .order-data .wrapper .shopping-cart .middle-price-delivery,
-  .order-data .wrapper .shopping-cart .bottom-price-sum {
+  .order-data .wrapper .shopping-cart .up-price, .order-data .wrapper .shopping-cart .middle-price, .order-data .wrapper .shopping-cart .middle-price-delivery, .order-data .wrapper .shopping-cart .bottom-price-sum {
     gap: 0rem;
     font-size: 2rem;
   }
-  .order-data .wrapper .shopping-cart .up-price p,
-  .order-data .wrapper .shopping-cart .middle-price p,
-  .order-data .wrapper .shopping-cart .middle-price-delivery p,
-  .order-data .wrapper .shopping-cart .bottom-price-sum p {
+  .order-data .wrapper .shopping-cart .up-price p, .order-data .wrapper .shopping-cart .middle-price p, .order-data .wrapper .shopping-cart .middle-price-delivery p, .order-data .wrapper .shopping-cart .bottom-price-sum p {
     font-size: 1.6rem;
   }
-  .order-data .wrapper .shopping-cart .up-price p.mar-left,
-  .order-data .wrapper .shopping-cart .middle-price p.mar-left,
-  .order-data .wrapper .shopping-cart .middle-price-delivery p.mar-left,
-  .order-data .wrapper .shopping-cart .bottom-price-sum p.mar-left {
+  .order-data .wrapper .shopping-cart .up-price p.mar-left, .order-data .wrapper .shopping-cart .middle-price p.mar-left, .order-data .wrapper .shopping-cart .middle-price-delivery p.mar-left, .order-data .wrapper .shopping-cart .bottom-price-sum p.mar-left {
     margin-left: 4rem;
   }
   .order-data .wrapper .shopping-cart .up-price {
@@ -5250,91 +4751,73 @@ nav .big-container .container-bot a {
   .text p {
     max-width: 78%;
   }
-  .employees .container-right,
-  .employees .container-left {
+  .employees .container-right, .employees .container-left {
     gap: 6rem;
   }
-  .employees .container-right .text-container,
-  .employees .container-left .text-container {
+  .employees .container-right .text-container, .employees .container-left .text-container {
     margin-top: 10rem;
     max-width: 45vw;
   }
-  .employees .container-right .text-container p,
-  .employees .container-left .text-container p {
+  .employees .container-right .text-container p, .employees .container-left .text-container p {
     margin-top: 12rem;
   }
-  .employees .container-right .text-container .logo,
-  .employees .container-left .text-container .logo {
+  .employees .container-right .text-container .logo, .employees .container-left .text-container .logo {
     margin-top: 14rem;
   }
-  .employees .container-right .img-container,
-  .employees .container-left .img-container {
+  .employees .container-right .img-container, .employees .container-left .img-container {
     height: 72vh;
   }
-  .cabinet .container-right,
-  .cabinet .container-left {
+  .cabinet .container-right, .cabinet .container-left {
     gap: 7rem;
   }
-  .cabinet .container-right .text-container,
-  .cabinet .container-left .text-container {
+  .cabinet .container-right .text-container, .cabinet .container-left .text-container {
     margin-top: 14rem;
     max-width: 40vw;
   }
-  .cabinet .container-right .text-container .logo,
-  .cabinet .container-left .text-container .logo {
+  .cabinet .container-right .text-container .logo, .cabinet .container-left .text-container .logo {
     margin-top: 12rem;
   }
-  .cabinet .container-right .img-container,
-  .cabinet .container-left .img-container {
+  .cabinet .container-right .img-container, .cabinet .container-left .img-container {
     height: 64vh;
   }
-  .offer .container-right,
-  .offer .container-left {
+  .offer .container-right, .offer .container-left {
     gap: 8rem;
     margin-top: 15rem;
   }
-  .offer .container-right .img-container,
-  .offer .container-left .img-container {
+  .offer .container-right .img-container, .offer .container-left .img-container {
     width: 42vw;
     height: 80vh;
   }
-  .offer .container-right .img-container img,
-  .offer .container-left .img-container img {
+  .offer .container-right .img-container img, .offer .container-left .img-container img {
     width: 100%;
     height: 100%;
     display: block;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
-  .offer .container-right .text-container,
-  .offer .container-left .text-container {
+  .offer .container-right .text-container, .offer .container-left .text-container {
     max-width: 44vw;
   }
-  .offer .container-right .text-container h1,
-  .offer .container-left .text-container h1 {
+  .offer .container-right .text-container h1, .offer .container-left .text-container h1 {
     font-size: 7rem;
     margin-top: 6rem;
   }
-  .offer .container-right .text-container p,
-  .offer .container-left .text-container p {
+  .offer .container-right .text-container p, .offer .container-left .text-container p {
     margin-top: 4rem;
     font-size: 2rem;
     line-height: 170%;
   }
-  .offer .container-right .text-container button,
-  .offer .container-left .text-container button {
+  .offer .container-right .text-container button, .offer .container-left .text-container button {
     padding: 10rem 10rem;
     margin-top: 7rem;
   }
-  .offer .container-right .text-container button .container a,
-  .offer .container-left .text-container button .container a {
+  .offer .container-right .text-container button .container a, .offer .container-left .text-container button .container a {
     top: -20px;
     left: -30px;
     font-size: 2rem;
     min-width: 25rem;
   }
-  .offer .container-right .text-container button .container i,
-  .offer .container-left .text-container button .container i {
+  .offer .container-right .text-container button .container i, .offer .container-left .text-container button .container i {
     top: 40px;
     left: -10px;
     font-size: 1.8rem;
@@ -5348,55 +4831,45 @@ nav .big-container .container-bot a {
   .offer .container-right .text-container {
     margin-left: 2rem;
   }
-  .suggestions .container-right,
-  .suggestions .container-left {
+  .suggestions .container-right, .suggestions .container-left {
     flex-direction: column-reverse;
     gap: 10rem;
     margin-top: 15rem;
     margin-bottom: 15rem;
   }
-  .suggestions .container-right .img-container,
-  .suggestions .container-left .img-container {
+  .suggestions .container-right .img-container, .suggestions .container-left .img-container {
     width: 100vw;
     height: 86vh;
   }
-  .suggestions .container-right .question,
-  .suggestions .container-left .question {
+  .suggestions .container-right .question, .suggestions .container-left .question {
     margin: 0 auto 6rem;
     max-width: 60vw;
   }
-  .suggestions .container-right .question .question-title,
-  .suggestions .container-left .question .question-title {
+  .suggestions .container-right .question .question-title, .suggestions .container-left .question .question-title {
     align-content: flex-start;
     padding-bottom: 1rem;
   }
-  .suggestions .container-right .question .question-title h2,
-  .suggestions .container-left .question .question-title h2 {
+  .suggestions .container-right .question .question-title h2, .suggestions .container-left .question .question-title h2 {
     font-size: 9rem;
     margin-bottom: 8rem;
   }
-  .suggestions .container-right .question .question-title .question-btn,
-  .suggestions .container-left .question .question-title .question-btn {
+  .suggestions .container-right .question .question-title .question-btn, .suggestions .container-left .question .question-title .question-btn {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
     font-size: 2rem;
     margin-top: 6rem;
   }
-  .suggestions .container-right .question .question-title .question-btn p,
-  .suggestions .container-left .question .question-title .question-btn p {
+  .suggestions .container-right .question .question-title .question-btn p, .suggestions .container-left .question .question-title .question-btn p {
     font-size: 2rem;
   }
-  .suggestions .container-right .question .wrapper,
-  .suggestions .container-left .question .wrapper {
+  .suggestions .container-right .question .wrapper, .suggestions .container-left .question .wrapper {
     flex-direction: column;
   }
-  .suggestions .container-right .question .wrapper .column .p-container,
-  .suggestions .container-left .question .wrapper .column .p-container {
+  .suggestions .container-right .question .wrapper .column .p-container, .suggestions .container-left .question .wrapper .column .p-container {
     gap: 10rem;
   }
-  .suggestions .container-right .question .wrapper .column .p-container a p,
-  .suggestions .container-left .question .wrapper .column .p-container a p {
+  .suggestions .container-right .question .wrapper .column .p-container a p, .suggestions .container-left .question .wrapper .column .p-container a p {
     font-size: 2rem;
   }
   .suggestions .container-left {
@@ -5647,13 +5120,7 @@ nav .big-container .container-bot a {
     display: flex;
     flex-direction: column;
   }
-  .procedure-desc
-    .recomendations
-    .button-container
-    .wrapper
-    button
-    .container
-    a {
+  .procedure-desc .recomendations .button-container .wrapper button .container a {
     position: absolute;
     top: -20px;
     left: -30px;
@@ -5662,23 +5129,10 @@ nav .big-container .container-bot a {
     font-size: 2rem;
     min-width: 25rem;
   }
-  .procedure-desc
-    .recomendations
-    .button-container
-    .wrapper
-    button
-    .container
-    a:hover
-    ~ i {
+  .procedure-desc .recomendations .button-container .wrapper button .container a:hover ~ i {
     left: 20px;
   }
-  .procedure-desc
-    .recomendations
-    .button-container
-    .wrapper
-    button
-    .container
-    i {
+  .procedure-desc .recomendations .button-container .wrapper button .container i {
     position: absolute;
     top: 40px;
     left: -10px;
@@ -5724,14 +5178,7 @@ nav .big-container .container-bot a {
     cursor: pointer;
     color: black;
   }
-  .procedure-desc
-    .faq
-    .wrapper
-    .question
-    .question-title
-    .question-btn
-    .arrow
-    i {
+  .procedure-desc .faq .wrapper .question .question-title .question-btn .arrow i {
     color: black;
   }
   .procedure-desc .faq .wrapper .question .question-title .rotate {
@@ -5767,22 +5214,10 @@ nav .big-container .container-bot a {
   .price-list .price-list-container .question .question-text .category .one {
     min-width: 12.6rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .mobile-show {
+  .price-list .price-list-container .question .question-text .category .two .mobile-show {
     display: flex;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .mobile-hide {
+  .price-list .price-list-container .question .question-text .category .two .mobile-hide {
     display: none;
   }
   .footer .wrapper {
@@ -5942,11 +5377,11 @@ nav .big-container .container-bot a {
     overflow: hidden;
   }
   .team .slide-container .image-content,
-  .team .slide-container .card-content {
+.team .slide-container .card-content {
     padding: 0;
   }
   .team .slide-container .image-content h2,
-  .team .slide-container .card-content h2 {
+.team .slide-container .card-content h2 {
     margin-top: 2rem;
   }
   .team .slide-container .image-content {
@@ -6048,23 +5483,14 @@ nav .big-container .container-bot a {
   .voucher-type .wrapper .shopping-cart .heading i {
     font-size: 2.7rem;
   }
-  .voucher-type .wrapper .shopping-cart .up-price,
-  .voucher-type .wrapper .shopping-cart .middle-price,
-  .voucher-type .wrapper .shopping-cart .middle-price-delivery,
-  .voucher-type .wrapper .shopping-cart .bottom-price-sum {
+  .voucher-type .wrapper .shopping-cart .up-price, .voucher-type .wrapper .shopping-cart .middle-price, .voucher-type .wrapper .shopping-cart .middle-price-delivery, .voucher-type .wrapper .shopping-cart .bottom-price-sum {
     gap: 0rem;
     font-size: 2rem;
   }
-  .voucher-type .wrapper .shopping-cart .up-price p,
-  .voucher-type .wrapper .shopping-cart .middle-price p,
-  .voucher-type .wrapper .shopping-cart .middle-price-delivery p,
-  .voucher-type .wrapper .shopping-cart .bottom-price-sum p {
+  .voucher-type .wrapper .shopping-cart .up-price p, .voucher-type .wrapper .shopping-cart .middle-price p, .voucher-type .wrapper .shopping-cart .middle-price-delivery p, .voucher-type .wrapper .shopping-cart .bottom-price-sum p {
     font-size: 1.6rem;
   }
-  .voucher-type .wrapper .shopping-cart .up-price p.mar-left,
-  .voucher-type .wrapper .shopping-cart .middle-price p.mar-left,
-  .voucher-type .wrapper .shopping-cart .middle-price-delivery p.mar-left,
-  .voucher-type .wrapper .shopping-cart .bottom-price-sum p.mar-left {
+  .voucher-type .wrapper .shopping-cart .up-price p.mar-left, .voucher-type .wrapper .shopping-cart .middle-price p.mar-left, .voucher-type .wrapper .shopping-cart .middle-price-delivery p.mar-left, .voucher-type .wrapper .shopping-cart .bottom-price-sum p.mar-left {
     margin-left: 4rem;
   }
   .voucher-type .wrapper .shopping-cart .up-price {
@@ -6091,12 +5517,12 @@ nav .big-container .container-bot a {
     border-radius: 25px;
     font-size: 1.6rem;
   }
-  .voucher-type .wrapper .voucher {
+  .voucher-type .wrapper .voucher-selected .voucher {
     margin-top: 5rem;
     margin-left: 0;
     border-radius: 44% 44% 0 0;
   }
-  .voucher-type .wrapper .voucher .wrapper {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper {
     width: 93vw;
     height: 48rem;
     /* Hide the browser's default radio button */
@@ -6107,39 +5533,39 @@ nav .big-container .container-bot a {
     /* Show the indicator (dot/circle) when checked */
     /* Style the indicator (dot/circle) */
   }
-  .voucher-type .wrapper .voucher .wrapper h3 {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper h3 {
     margin-top: 10rem;
     font-size: 2.8rem;
   }
-  .voucher-type .wrapper .voucher .wrapper p {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper p {
     margin-top: 2rem;
     font-size: 1.6rem;
     max-width: 88%;
     line-height: 170%;
   }
-  .voucher-type .wrapper .voucher .wrapper p.small {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper p.small {
     margin-top: 0;
     font-size: 1.2rem;
   }
-  .voucher-type .wrapper .voucher .wrapper label.container input {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper label.container input {
     margin-bottom: 3rem;
     height: 3rem;
     width: 3rem;
     cursor: pointer;
   }
-  .voucher-type .wrapper .voucher .wrapper .container {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container {
     display: block;
     position: relative;
     cursor: pointer;
     margin-top: 2rem;
   }
-  .voucher-type .wrapper .voucher .wrapper .container input {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container input {
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
   }
-  .voucher-type .wrapper .voucher .wrapper .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -6149,30 +5575,18 @@ nav .big-container .container-bot a {
     border-radius: 50%;
     border: white 1px solid !important;
   }
-  .voucher-type
-    .wrapper
-    .voucher
-    .wrapper
-    .container
-    input:checked
-    ~ .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container input:checked ~ .checkmark {
     background-color: #d8ccc4;
   }
-  .voucher-type .wrapper .voucher .wrapper .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
-  .voucher-type
-    .wrapper
-    .voucher
-    .wrapper
-    .container
-    input:checked
-    ~ .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container input:checked ~ .checkmark:after {
     display: block;
   }
-  .voucher-type .wrapper .voucher .wrapper .container .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher .wrapper .container .checkmark:after {
     top: 9px;
     left: 9px;
     width: 8px;
@@ -6181,38 +5595,26 @@ nav .big-container .container-bot a {
     background: white;
     border: white 1px solid !important;
   }
-  .voucher-type .wrapper .voucher-electronic {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic {
     border: black solid 1px;
     background-color: white;
   }
-  .voucher-type .wrapper .voucher-electronic .wrapper {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper {
     /* When the radio button is checked, add a color background */
   }
-  .voucher-type .wrapper .voucher-electronic .wrapper h3,
-  .voucher-type .wrapper .voucher-electronic .wrapper p {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper h3, .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper p {
     color: #231f20;
   }
-  .voucher-type .wrapper .voucher-electronic .wrapper .container .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container .checkmark {
     background-color: white;
     border-radius: 50%;
     border: black 1px solid !important;
   }
-  .voucher-type
-    .wrapper
-    .voucher-electronic
-    .wrapper
-    .container
-    .checkmark:after {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container .checkmark:after {
     background: black;
     border: black 1px solid !important;
   }
-  .voucher-type
-    .wrapper
-    .voucher-electronic
-    .wrapper
-    .container
-    input:checked
-    ~ .checkmark {
+  .voucher-type .wrapper .voucher-selected .voucher-electronic .wrapper .container input:checked ~ .checkmark {
     background-color: white;
   }
   .buy-vouncher-page {
@@ -6296,16 +5698,7 @@ nav .big-container .container-bot a {
     gap: 1rem;
     margin-top: 2.5rem;
   }
-  .voucher-counter
-    .container
-    .text-container
-    .counter-container
-    .counter-display,
-  .voucher-counter
-    .container
-    .text-container
-    .counter-container
-    .counter-display2 {
+  .voucher-counter .container .text-container .counter-container .counter-display, .voucher-counter .container .text-container .counter-container .counter-display2 {
     width: 21rem;
     height: 5rem;
     font-size: 2rem;
@@ -6368,7 +5761,7 @@ nav .big-container .container-bot a {
     width: 100%;
     height: 100%;
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
   .voucher-counter .right .text-container p.m1 {
     margin-top: 4rem;
@@ -6438,7 +5831,7 @@ nav .big-container .container-bot a {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     opacity: 1;
   }
   .voucher-select-category .services .wrapper a .img-container .background {
@@ -6449,18 +5842,12 @@ nav .big-container .container-bot a {
     width: 100%;
     opacity: 0;
   }
-  .voucher-select-category
-    .services
-    .wrapper
-    a
-    .img-container
-    .background
-    .img-B {
+  .voucher-select-category .services .wrapper a .img-container .background .img-B {
     display: block;
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
   .voucher-select-category .services .wrapper .bottom-container {
     display: flex;
@@ -6490,22 +5877,11 @@ nav .big-container .container-bot a {
     padding: 1.7rem 3.6rem;
     font-size: 1.6rem;
   }
-  .voucher-select-category
-    .services
-    .wrapper
-    .bottom-container
-    a
-    .button:hover {
+  .voucher-select-category .services .wrapper .bottom-container a .button:hover {
     background-color: white;
     color: #d8ccc4;
   }
-  .voucher-select-category
-    .services
-    .wrapper
-    .bottom-container
-    a
-    .button:hover
-    i {
+  .voucher-select-category .services .wrapper .bottom-container a .button:hover i {
     color: #d8ccc4;
   }
   .voucher-select-category .btn {
@@ -6563,14 +5939,7 @@ nav .big-container .container-bot a {
     gap: 3rem;
     width: 100vw;
   }
-  .order-data
-    .wrapper
-    .big-container
-    .container
-    .left-right-container
-    .inputs
-    .input-container
-    input {
+  .order-data .wrapper .big-container .container .left-right-container .inputs .input-container input {
     width: 94%;
   }
   .order-data .wrapper .big-container .container .one {
@@ -6583,14 +5952,7 @@ nav .big-container .container-bot a {
   .order-data .wrapper .big-container .container .two form h2 {
     font-size: 3rem;
   }
-  .order-data
-    .wrapper
-    .big-container
-    .container
-    .checkbox-container
-    form
-    .input-container
-    input[type="checkbox"] {
+  .order-data .wrapper .big-container .container .checkbox-container form .input-container input[type=checkbox] {
     min-width: 16px;
   }
   .order-data .wrapper .shopping-cart {
@@ -6607,23 +5969,14 @@ nav .big-container .container-bot a {
   .order-data .wrapper .shopping-cart .heading i {
     font-size: 2.7rem;
   }
-  .order-data .wrapper .shopping-cart .up-price,
-  .order-data .wrapper .shopping-cart .middle-price,
-  .order-data .wrapper .shopping-cart .middle-price-delivery,
-  .order-data .wrapper .shopping-cart .bottom-price-sum {
+  .order-data .wrapper .shopping-cart .up-price, .order-data .wrapper .shopping-cart .middle-price, .order-data .wrapper .shopping-cart .middle-price-delivery, .order-data .wrapper .shopping-cart .bottom-price-sum {
     gap: 0rem;
     font-size: 2rem;
   }
-  .order-data .wrapper .shopping-cart .up-price p,
-  .order-data .wrapper .shopping-cart .middle-price p,
-  .order-data .wrapper .shopping-cart .middle-price-delivery p,
-  .order-data .wrapper .shopping-cart .bottom-price-sum p {
+  .order-data .wrapper .shopping-cart .up-price p, .order-data .wrapper .shopping-cart .middle-price p, .order-data .wrapper .shopping-cart .middle-price-delivery p, .order-data .wrapper .shopping-cart .bottom-price-sum p {
     font-size: 1.6rem;
   }
-  .order-data .wrapper .shopping-cart .up-price p.mar-left,
-  .order-data .wrapper .shopping-cart .middle-price p.mar-left,
-  .order-data .wrapper .shopping-cart .middle-price-delivery p.mar-left,
-  .order-data .wrapper .shopping-cart .bottom-price-sum p.mar-left {
+  .order-data .wrapper .shopping-cart .up-price p.mar-left, .order-data .wrapper .shopping-cart .middle-price p.mar-left, .order-data .wrapper .shopping-cart .middle-price-delivery p.mar-left, .order-data .wrapper .shopping-cart .bottom-price-sum p.mar-left {
     margin-left: 4rem;
   }
   .order-data .wrapper .shopping-cart .up-price {
@@ -6732,64 +6085,52 @@ nav .big-container .container-bot a {
     max-width: 96vw;
     font-size: 1.6rem;
   }
-  .employees .container-right,
-  .employees .container-left {
+  .employees .container-right, .employees .container-left {
     margin-top: 4rem;
     flex-direction: column-reverse;
     gap: 6rem;
   }
-  .employees .container-right .text-container,
-  .employees .container-left .text-container {
+  .employees .container-right .text-container, .employees .container-left .text-container {
     margin: 0 auto;
     max-width: 90vw;
   }
-  .employees .container-right .text-container h1,
-  .employees .container-left .text-container h1 {
+  .employees .container-right .text-container h1, .employees .container-left .text-container h1 {
     font-size: 4.5rem;
   }
-  .employees .container-right .text-container p,
-  .employees .container-left .text-container p {
+  .employees .container-right .text-container p, .employees .container-left .text-container p {
     margin-top: 4rem;
     font-size: 1.6rem;
   }
-  .employees .container-right .text-container .logo,
-  .employees .container-left .text-container .logo {
+  .employees .container-right .text-container .logo, .employees .container-left .text-container .logo {
     margin-top: 4rem;
   }
-  .employees .container-right .img-container,
-  .employees .container-left .img-container {
+  .employees .container-right .img-container, .employees .container-left .img-container {
     height: 80vh;
     width: 100vw;
   }
   .cabinet {
     margin-top: 8rem;
   }
-  .cabinet .container-right,
-  .cabinet .container-left {
+  .cabinet .container-right, .cabinet .container-left {
     margin-top: 4rem;
     flex-direction: column-reverse;
     gap: 6rem;
   }
-  .cabinet .container-right .text-container,
-  .cabinet .container-left .text-container {
+  .cabinet .container-right .text-container, .cabinet .container-left .text-container {
     margin: 0 auto;
     max-width: 90vw;
   }
-  .cabinet .container-right .text-container h1,
-  .cabinet .container-left .text-container h1 {
+  .cabinet .container-right .text-container h1, .cabinet .container-left .text-container h1 {
     font-size: 4.5rem;
   }
-  .cabinet .container-right .text-container p,
-  .cabinet .container-left .text-container p {
+  .cabinet .container-right .text-container p, .cabinet .container-left .text-container p {
     margin-top: 4rem;
     font-size: 1.6rem;
   }
-  .cabinet .container-right .text-container .logo,
-  .cabinet .container-left .text-container .logo {
+  .cabinet .container-right .text-container .logo, .cabinet .container-left .text-container .logo {
     margin-top: 4rem;
   }
-  .cabinet .container-right .img-container,
-  .cabinet .container-left .img-container {
+  .cabinet .container-right .img-container, .cabinet .container-left .img-container {
     height: 80vh;
     width: 100vw;
   }
@@ -6803,11 +6144,11 @@ nav .big-container .container-bot a {
     overflow: hidden;
   }
   .cabinet .slide-container .image-content,
-  .cabinet .slide-container .card-content {
+.cabinet .slide-container .card-content {
     padding: 0;
   }
   .cabinet .slide-container .image-content h2,
-  .cabinet .slide-container .card-content h2 {
+.cabinet .slide-container .card-content h2 {
     margin-top: 2rem;
   }
   .cabinet .slide-container .image-content {
@@ -6834,48 +6175,40 @@ nav .big-container .container-bot a {
   .cabinet .slide-container .swiper-button-prev {
     left: 20px;
   }
-  .offer .container-right,
-  .offer .container-left {
+  .offer .container-right, .offer .container-left {
     flex-direction: column;
     gap: 5rem;
     margin-top: 0;
   }
-  .offer .container-right .img-container,
-  .offer .container-left .img-container {
+  .offer .container-right .img-container, .offer .container-left .img-container {
     width: 100vw;
     height: 80vh;
   }
-  .offer .container-right .text-container,
-  .offer .container-left .text-container {
+  .offer .container-right .text-container, .offer .container-left .text-container {
     max-width: 98vw;
     margin: 0 auto;
   }
-  .offer .container-right .text-container h1,
-  .offer .container-left .text-container h1 {
+  .offer .container-right .text-container h1, .offer .container-left .text-container h1 {
     font-size: 4.5rem;
     margin-top: 6rem;
     text-align: center;
   }
-  .offer .container-right .text-container p,
-  .offer .container-left .text-container p {
+  .offer .container-right .text-container p, .offer .container-left .text-container p {
     margin-top: 4rem;
     font-size: 1.6rem;
     line-height: 150%;
   }
-  .offer .container-right .text-container button,
-  .offer .container-left .text-container button {
+  .offer .container-right .text-container button, .offer .container-left .text-container button {
     padding: 7rem 7rem;
     margin: 5rem auto 0;
   }
-  .offer .container-right .text-container button .container a,
-  .offer .container-left .text-container button .container a {
+  .offer .container-right .text-container button .container a, .offer .container-left .text-container button .container a {
     top: -20px;
     left: -30px;
     font-size: 1.6rem;
     min-width: 18rem;
   }
-  .offer .container-right .text-container button .container i,
-  .offer .container-left .text-container button .container i {
+  .offer .container-right .text-container button .container i, .offer .container-left .text-container button .container i {
     top: 24px;
     left: -10px;
     font-size: 1.8rem;
@@ -6889,54 +6222,45 @@ nav .big-container .container-bot a {
   .offer .container-right .text-container {
     margin: 0 auto;
   }
-  .suggestions .container-right,
-  .suggestions .container-left {
+  .suggestions .container-right, .suggestions .container-left {
     gap: 4rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
   }
-  .suggestions .container-right .img-container,
-  .suggestions .container-left .img-container {
+  .suggestions .container-right .img-container, .suggestions .container-left .img-container {
     width: 100vw;
     height: 86vh;
   }
-  .suggestions .container-right .question,
-  .suggestions .container-left .question {
+  .suggestions .container-right .question, .suggestions .container-left .question {
     margin: 0 auto 6rem;
     max-width: 96vw;
   }
-  .suggestions .container-right .question .question-title,
-  .suggestions .container-left .question .question-title {
+  .suggestions .container-right .question .question-title, .suggestions .container-left .question .question-title {
     align-items: center;
     padding-bottom: 1rem;
   }
-  .suggestions .container-right .question .question-title h2,
-  .suggestions .container-left .question .question-title h2 {
+  .suggestions .container-right .question .question-title h2, .suggestions .container-left .question .question-title h2 {
     font-size: 4.5rem;
     text-align: center;
     margin-bottom: 4rem;
   }
-  .suggestions .container-right .question .question-title .question-btn,
-  .suggestions .container-left .question .question-title .question-btn {
+  .suggestions .container-right .question .question-title .question-btn, .suggestions .container-left .question .question-title .question-btn {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
     font-size: 2rem;
     margin-top: 6rem;
   }
-  .suggestions .container-right .question .question-title .question-btn p,
-  .suggestions .container-left .question .question-title .question-btn p {
+  .suggestions .container-right .question .question-title .question-btn p, .suggestions .container-left .question .question-title .question-btn p {
     font-size: 1.6rem;
   }
-  .suggestions .container-right .question .wrapper .column .p-container,
-  .suggestions .container-left .question .wrapper .column .p-container {
+  .suggestions .container-right .question .wrapper .column .p-container, .suggestions .container-left .question .wrapper .column .p-container {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
   }
-  .suggestions .container-right .question .wrapper .column .p-container a p,
-  .suggestions .container-left .question .wrapper .column .p-container a p {
+  .suggestions .container-right .question .wrapper .column .p-container a p, .suggestions .container-left .question .wrapper .column .p-container a p {
     font-size: 1.6rem;
     margin-top: 0;
   }
@@ -6967,13 +6291,7 @@ nav .big-container .container-bot a {
   .price-list .price-list-container .question .question-title h2 {
     font-size: 3.5rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-title
-    .question-btn
-    .arrow
-    i {
+  .price-list .price-list-container .question .question-title .question-btn .arrow i {
     font-size: 1.6rem;
   }
   .price-list .price-list-container .question .question-text .category {
@@ -6993,82 +6311,30 @@ nav .big-container .container-bot a {
     flex-direction: column;
     gap: 3.5rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .hr {
+  .price-list .price-list-container .question .question-text .category .two .hr {
     width: 10rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .p-container {
+  .price-list .price-list-container .question .question-text .category .two .p-container {
     display: flex;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .p-container
-    p {
+  .price-list .price-list-container .question .question-text .category .two .p-container p {
     font-size: 1.6rem;
     max-width: 25vw;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .p-container
-    .procedure {
+  .price-list .price-list-container .question .question-text .category .two .p-container .procedure {
     min-width: 54vw;
     max-width: 54vw;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .p-container
-    .package {
+  .price-list .price-list-container .question .question-text .category .two .p-container .package {
     margin-left: 0.5rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .p-container
-    .price {
+  .price-list .price-list-container .question .question-text .category .two .p-container .price {
     margin-left: 3rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .mobile-hide {
+  .price-list .price-list-container .question .question-text .category .two .mobile-hide {
     display: none;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .mobile-show {
+  .price-list .price-list-container .question .question-text .category .two .mobile-show {
     display: flex;
   }
   .price-list .price-list-container .question-text {
@@ -7301,13 +6567,7 @@ nav .big-container .container-bot a {
     display: flex;
     flex-direction: column;
   }
-  .procedure-desc
-    .recomendations
-    .button-container
-    .wrapper
-    button
-    .container
-    a {
+  .procedure-desc .recomendations .button-container .wrapper button .container a {
     top: -20px;
     left: -30px;
     display: block;
@@ -7315,23 +6575,10 @@ nav .big-container .container-bot a {
     font-size: 1.6rem;
     min-width: 15rem;
   }
-  .procedure-desc
-    .recomendations
-    .button-container
-    .wrapper
-    button
-    .container
-    a:hover
-    ~ i {
+  .procedure-desc .recomendations .button-container .wrapper button .container a:hover ~ i {
     left: 20px;
   }
-  .procedure-desc
-    .recomendations
-    .button-container
-    .wrapper
-    button
-    .container
-    i {
+  .procedure-desc .recomendations .button-container .wrapper button .container i {
     position: absolute;
     top: 40px;
     left: -10px;
@@ -7490,22 +6737,10 @@ nav .big-container .container-bot a {
     left: -30px;
     font-size: 1.8rem;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .mobile-hide {
+  .price-list .price-list-container .question .question-text .category .two .mobile-hide {
     display: none;
   }
-  .price-list
-    .price-list-container
-    .question
-    .question-text
-    .category
-    .two
-    .mobile-show {
+  .price-list .price-list-container .question .question-text .category .two .mobile-show {
     display: flex;
   }
   .price-list .price-list-container .question .question-title h2 {
@@ -7653,4 +6888,4 @@ nav .big-container .container-bot a {
   .navbar .logo {
     width: 16rem;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

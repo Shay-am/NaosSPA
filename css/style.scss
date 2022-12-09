@@ -898,6 +898,22 @@ $pink: #d8ccc4;
             .middle-price {
                 margin-top: 3rem;
 
+                .cart-container__item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    p.cart-container__orders__name {
+                        max-width: 50%;
+                    }
+                    
+                    i {
+                        cursor: pointer;
+                        font-size: 1.8rem;
+                    }
+
+                }
+
                 p {
                     line-height: 180%;
 
@@ -942,142 +958,147 @@ $pink: #d8ccc4;
             }
         }
 
-        .voucher {
-            background-color: $pink;
-            margin-left: 8rem;
-            border-radius: 44% 44% 0 0;
+        .voucher-selected {
+            display: flex;
 
-            .wrapper {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                width: 24vw;
-                height: 63rem;
-
-                h3 {
-                    margin-top: 7rem;
-                    line-height: 110%;
-                    color: $black-paragraph;
-                    font-size: 3.2rem;
-                    text-align: center;
-                    color: white;
-                }
+            .voucher {
+                background-color: $pink;
+                margin-left: 8rem;
+                border-radius: 44% 44% 0 0;
     
-                p {
-                    margin-top: 5rem;
-                    font-size: 2.2rem;
-                    font-family: 'typold-light';
-                    text-align: center;
-                    max-width: 88%;
-                    line-height: 170%;
-                }
+                .wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 24vw;
+                    height: 63rem;
     
-                p.small {
-                    font-size: 1.2rem;
-                }
-
-                // Radio button styling
-                
-                label.container {
-                    input {
-                        margin-bottom: 3rem;
-                        height: 3rem; width: 3rem;
+                    h3 {
+                        margin-top: 7rem;
+                        line-height: 110%;
+                        color: $black-paragraph;
+                        font-size: 3.2rem;
+                        text-align: center;
+                        color: white;
+                    }
+        
+                    p {
+                        margin-top: 5rem;
+                        font-size: 2.2rem;
+                        font-family: 'typold-light';
+                        text-align: center;
+                        max-width: 88%;
+                        line-height: 170%;
+                    }
+        
+                    p.small {
+                        font-size: 1.2rem;
+                    }
+    
+                    // Radio button styling
+                    
+                    label.container {
+                        input {
+                            margin-bottom: 3rem;
+                            height: 3rem; width: 3rem;
+                            cursor: pointer;
+                        }   
+                    }
+    
+                    .container {
+                        display: block;
+                        position: relative;
                         cursor: pointer;
-                    }   
-                }
-
-                .container {
-                    display: block;
-                    position: relative;
-                    cursor: pointer;
-                    margin-top: 2rem;
-                  }
-                  
-                  /* Hide the browser's default radio button */
-                  .container input {
-                    // position: absolute;
-                    opacity: 0;
-                    cursor: pointer;
-                    height: 0;
-                    width: 0;
-                  }
-                  
-                  /* Create a custom radio button */
-                  .checkmark {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 3rem;
-                    width: 3rem;
-                    background-color: $pink;
-                    border-radius: 50%;
-                    border: white 1px solid !important;
-                  }
-                  
-                  /* On mouse-over, add a grey background color */
-                //   .container:hover input ~ .checkmark {
-                //     background-color: #ccc;
-                //   }
-                  
-                  /* When the radio button is checked, add a color background */
-                  .container input:checked ~ .checkmark {
-                    background-color: $pink;
-                  }
-                  
-                  /* Create the indicator (the dot/circle - hidden when not checked) */
-                  .checkmark:after {
-                    content: "";
-                    position: absolute;
-                    display: none;
-                  }
-                  
-                  /* Show the indicator (dot/circle) when checked */
-                  .container input:checked ~ .checkmark:after {
-                    display: block;
-                  }
-                  
-                  /* Style the indicator (dot/circle) */
-                  .container .checkmark:after {
-                    top: 9px;
-                    left: 9px;
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-                    background: white;
-                    border: white 1px solid !important;
-                  }
-            }
-        }
-
-        .voucher-electronic {
-            border: black solid 1px;
-            background-color: white;
-
-            .wrapper {
-                h3, p {
-                    color: $black-paragraph;
-                }
-
-                .container {
-                    .checkmark {
-                        background-color: white;
+                        margin-top: 2rem;
+                      }
+                      
+                      /* Hide the browser's default radio button */
+                      .container input {
+                        // position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                      }
+                      
+                      /* Create a custom radio button */
+                      .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 3rem;
+                        width: 3rem;
+                        background-color: $pink;
                         border-radius: 50%;
-                        border: black 1px solid !important;
+                        border: white 1px solid !important;
+                      }
+                      
+                      /* On mouse-over, add a grey background color */
+                    //   .container:hover input ~ .checkmark {
+                    //     background-color: #ccc;
+                    //   }
+                      
+                      /* When the radio button is checked, add a color background */
+                      .container input:checked ~ .checkmark {
+                        background-color: $pink;
+                      }
+                      
+                      /* Create the indicator (the dot/circle - hidden when not checked) */
+                      .checkmark:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                      }
+                      
+                      /* Show the indicator (dot/circle) when checked */
+                      .container input:checked ~ .checkmark:after {
+                        display: block;
+                      }
+                      
+                      /* Style the indicator (dot/circle) */
+                      .container .checkmark:after {
+                        top: 9px;
+                        left: 9px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: white;
+                        border: white 1px solid !important;
                       }
                 }
-
-                .container .checkmark:after {
-                    background: black;
-                    border: black 1px solid !important;
-                }
-
-                /* When the radio button is checked, add a color background */
-                .container input:checked ~ .checkmark {
+            }
+    
+            .voucher-electronic {
+                border: black solid 1px;
                 background-color: white;
+    
+                .wrapper {
+                    h3, p {
+                        color: $black-paragraph;
+                    }
+    
+                    .container {
+                        .checkmark {
+                            background-color: white;
+                            border-radius: 50%;
+                            border: black 1px solid !important;
+                          }
+                    }
+    
+                    .container .checkmark:after {
+                        background: black;
+                        border: black 1px solid !important;
+                    }
+    
+                    /* When the radio button is checked, add a color background */
+                    .container input:checked ~ .checkmark {
+                    background-color: white;
+                    }
                 }
             }
         }
+
     }
 }
 
@@ -3740,140 +3761,143 @@ nav {
                     }
                 }
             }
-    
-            .voucher {
-                margin-left: 8rem;
-                border-radius: 44% 44% 0 0;
-    
-                .wrapper {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-between;
-                    width: 24vw;
-                    height: 51rem;
-    
-                    h3 {
-                        margin-top: 7rem;
-                        font-size: 2.8rem;
-                        text-align: center;
-                        color: white;
-                    }
+
+            .voucher-selected {
+                .voucher {
+                    margin-left: 8rem;
+                    border-radius: 44% 44% 0 0;
         
-                    p {
-                        margin-top: 5rem;
-                        font-size: 1.7rem;
-                        font-family: 'typold-light';
-                        text-align: center;
-                        max-width: 88%;
-                        line-height: 170%;
-                    }
+                    .wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 24vw;
+                        height: 51rem;
         
-                    p.small {
-                        font-size: 1.2rem;
-                    }
-    
-                    // Radio button styling
-                    
-                    label.container {
-                        input {
-                            margin-bottom: 3rem;
-                            height: 3rem; width: 3rem;
+                        h3 {
+                            margin-top: 7rem;
+                            font-size: 2.8rem;
+                            text-align: center;
+                            color: white;
+                        }
+            
+                        p {
+                            margin-top: 5rem;
+                            font-size: 1.7rem;
+                            font-family: 'typold-light';
+                            text-align: center;
+                            max-width: 88%;
+                            line-height: 170%;
+                        }
+            
+                        p.small {
+                            font-size: 1.2rem;
+                        }
+        
+                        // Radio button styling
+                        
+                        label.container {
+                            input {
+                                margin-bottom: 3rem;
+                                height: 3rem; width: 3rem;
+                                cursor: pointer;
+                            }   
+                        }
+        
+                        .container {
+                            display: block;
+                            position: relative;
                             cursor: pointer;
-                        }   
-                    }
-    
-                    .container {
-                        display: block;
-                        position: relative;
-                        cursor: pointer;
-                        margin-top: 2rem;
-                      }
-                      
-                      /* Hide the browser's default radio button */
-                      .container input {
-                        // position: absolute;
-                        opacity: 0;
-                        cursor: pointer;
-                        height: 0;
-                        width: 0;
-                      }
-                      
-                      /* Create a custom radio button */
-                      .checkmark {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 3rem;
-                        width: 3rem;
-                        background-color: $pink;
-                        border-radius: 50%;
-                        border: white 1px solid !important;
-                      }
-                      
-                      /* On mouse-over, add a grey background color */
-                    //   .container:hover input ~ .checkmark {
-                    //     background-color: #ccc;
-                    //   }
-                      
-                      /* When the radio button is checked, add a color background */
-                      .container input:checked ~ .checkmark {
-                        background-color: $pink;
-                      }
-                      
-                      /* Create the indicator (the dot/circle - hidden when not checked) */
-                      .checkmark:after {
-                        content: "";
-                        position: absolute;
-                        display: none;
-                      }
-                      
-                      /* Show the indicator (dot/circle) when checked */
-                      .container input:checked ~ .checkmark:after {
-                        display: block;
-                      }
-                      
-                      /* Style the indicator (dot/circle) */
-                      .container .checkmark:after {
-                        top: 9px;
-                        left: 9px;
-                        width: 8px;
-                        height: 8px;
-                        border-radius: 50%;
-                        background: white;
-                        border: white 1px solid !important;
-                      }
-                }
-            }
-    
-            .voucher-electronic {
-                border: black solid 1px;
-                background-color: white;
-    
-                .wrapper {
-                    h3, p {
-                        color: $black-paragraph;
-                    }
-    
-                    .container {
-                        .checkmark {
-                            background-color: white;
+                            margin-top: 2rem;
+                          }
+                          
+                          /* Hide the browser's default radio button */
+                          .container input {
+                            // position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+                          }
+                          
+                          /* Create a custom radio button */
+                          .checkmark {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 3rem;
+                            width: 3rem;
+                            background-color: $pink;
                             border-radius: 50%;
-                            border: black 1px solid !important;
+                            border: white 1px solid !important;
+                          }
+                          
+                          /* On mouse-over, add a grey background color */
+                        //   .container:hover input ~ .checkmark {
+                        //     background-color: #ccc;
+                        //   }
+                          
+                          /* When the radio button is checked, add a color background */
+                          .container input:checked ~ .checkmark {
+                            background-color: $pink;
+                          }
+                          
+                          /* Create the indicator (the dot/circle - hidden when not checked) */
+                          .checkmark:after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                          }
+                          
+                          /* Show the indicator (dot/circle) when checked */
+                          .container input:checked ~ .checkmark:after {
+                            display: block;
+                          }
+                          
+                          /* Style the indicator (dot/circle) */
+                          .container .checkmark:after {
+                            top: 9px;
+                            left: 9px;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background: white;
+                            border: white 1px solid !important;
                           }
                     }
-    
-                    .container .checkmark:after {
-                        background: black;
-                        border: black 1px solid !important;
-                    }
-    
-                    /* When the radio button is checked, add a color background */
-                    .container input:checked ~ .checkmark {
+                }
+        
+                .voucher-electronic {
+                    border: black solid 1px;
                     background-color: white;
+        
+                    .wrapper {
+                        h3, p {
+                            color: $black-paragraph;
+                        }
+        
+                        .container {
+                            .checkmark {
+                                background-color: white;
+                                border-radius: 50%;
+                                border: black 1px solid !important;
+                              }
+                        }
+        
+                        .container .checkmark:after {
+                            background: black;
+                            border: black 1px solid !important;
+                        }
+        
+                        /* When the radio button is checked, add a color background */
+                        .container input:checked ~ .checkmark {
+                        background-color: white;
+                        }
                     }
                 }
             }
+    
         }
     }
 
@@ -5267,133 +5291,138 @@ nav {
                     }
                 }
             }
-    
-            .voucher {
-                margin-top: 5rem;
-                margin-left: 0;
-                border-radius: 44% 44% 0 0;
-    
-                .wrapper {
-                    width: 50vw;
-                    height: 52rem;
-    
-                    h3 {
-                        margin-top: 7rem;
-                        font-size: 2.8rem;
-                    }
+
+            .voucher-selected {
+                flex-direction: column;
+                .voucher {
+                    margin-top: 5rem;
+                    margin-left: 0;
+                    border-radius: 44% 44% 0 0;
         
-                    p {
-                        margin-top: 5rem;
-                        font-size: 1.7rem;
-                        max-width: 88%;
-                        line-height: 170%;
-                    }
+                    .wrapper {
+                        width: 50vw;
+                        height: 52rem;
         
-                    p.small {
-                        font-size: 1.2rem;
-                    }
-    
-                    // Radio button styling
-                    
-                    label.container {
-                        input {
-                            margin-bottom: 3rem;
-                            height: 3rem; width: 3rem;
+                        h3 {
+                            margin-top: 7rem;
+                            font-size: 2.8rem;
+                        }
+            
+                        p {
+                            margin-top: 5rem;
+                            font-size: 1.7rem;
+                            max-width: 88%;
+                            line-height: 170%;
+                        }
+            
+                        p.small {
+                            font-size: 1.2rem;
+                        }
+        
+                        // Radio button styling
+                        
+                        label.container {
+                            input {
+                                margin-bottom: 3rem;
+                                height: 3rem; width: 3rem;
+                                cursor: pointer;
+                            }   
+                        }
+        
+                        .container {
+                            display: block;
+                            position: relative;
                             cursor: pointer;
-                        }   
-                    }
-    
-                    .container {
-                        display: block;
-                        position: relative;
-                        cursor: pointer;
-                        margin-top: 2rem;
-                      }
-                      
-                      /* Hide the browser's default radio button */
-                      .container input {
-                        // position: absolute;
-                        opacity: 0;
-                        cursor: pointer;
-                        height: 0;
-                        width: 0;
-                      }
-                      
-                      /* Create a custom radio button */
-                      .checkmark {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 3rem;
-                        width: 3rem;
-                        background-color: $pink;
-                        border-radius: 50%;
-                        border: white 1px solid !important;
-                      }
-                      
-                      /* On mouse-over, add a grey background color */
-                    //   .container:hover input ~ .checkmark {
-                    //     background-color: #ccc;
-                    //   }
-                      
-                      /* When the radio button is checked, add a color background */
-                      .container input:checked ~ .checkmark {
-                        background-color: $pink;
-                      }
-                      
-                      /* Create the indicator (the dot/circle - hidden when not checked) */
-                      .checkmark:after {
-                        content: "";
-                        position: absolute;
-                        display: none;
-                      }
-                      
-                      /* Show the indicator (dot/circle) when checked */
-                      .container input:checked ~ .checkmark:after {
-                        display: block;
-                      }
-                      
-                      /* Style the indicator (dot/circle) */
-                      .container .checkmark:after {
-                        top: 9px;
-                        left: 9px;
-                        width: 8px;
-                        height: 8px;
-                        border-radius: 50%;
-                        background: white;
-                        border: white 1px solid !important;
-                      }
-                }
-            }
-    
-            .voucher-electronic {
-                border: black solid 1px;
-                background-color: white;
-    
-                .wrapper {
-                    h3, p {
-                        color: $black-paragraph;
-                    }
-    
-                    .container {
-                        .checkmark {
-                            background-color: white;
+                            margin-top: 2rem;
+                          }
+                          
+                          /* Hide the browser's default radio button */
+                          .container input {
+                            // position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+                          }
+                          
+                          /* Create a custom radio button */
+                          .checkmark {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 3rem;
+                            width: 3rem;
+                            background-color: $pink;
                             border-radius: 50%;
-                            border: black 1px solid !important;
+                            border: white 1px solid !important;
+                          }
+                          
+                          /* On mouse-over, add a grey background color */
+                        //   .container:hover input ~ .checkmark {
+                        //     background-color: #ccc;
+                        //   }
+                          
+                          /* When the radio button is checked, add a color background */
+                          .container input:checked ~ .checkmark {
+                            background-color: $pink;
+                          }
+                          
+                          /* Create the indicator (the dot/circle - hidden when not checked) */
+                          .checkmark:after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                          }
+                          
+                          /* Show the indicator (dot/circle) when checked */
+                          .container input:checked ~ .checkmark:after {
+                            display: block;
+                          }
+                          
+                          /* Style the indicator (dot/circle) */
+                          .container .checkmark:after {
+                            top: 9px;
+                            left: 9px;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background: white;
+                            border: white 1px solid !important;
                           }
                     }
-    
-                    .container .checkmark:after {
-                        background: black;
-                        border: black 1px solid !important;
-                    }
-    
-                    /* When the radio button is checked, add a color background */
-                    .container input:checked ~ .checkmark {
+                }
+        
+                .voucher-electronic {
+                    border: black solid 1px;
                     background-color: white;
+        
+                    .wrapper {
+                        h3, p {
+                            color: $black-paragraph;
+                        }
+        
+                        .container {
+                            .checkmark {
+                                background-color: white;
+                                border-radius: 50%;
+                                border: black 1px solid !important;
+                              }
+                        }
+        
+                        .container .checkmark:after {
+                            background: black;
+                            border: black 1px solid !important;
+                        }
+        
+                        /* When the radio button is checked, add a color background */
+                        .container input:checked ~ .checkmark {
+                        background-color: white;
+                        }
                     }
                 }
             }
+    
+
         }
     }
 
@@ -6814,134 +6843,138 @@ nav {
                     }
                 }
             }
-    
-            .voucher {
-                margin-top: 5rem;
-                margin-left: 0;
-                border-radius: 44% 44% 0 0;
-    
-                .wrapper {
-                    width: 93vw;
-                    height: 48rem;
-    
-                    h3 {
-                        margin-top: 10rem;
-                        font-size: 2.8rem;
-                    }
+
+            .voucher-selected {
+                .voucher {
+                    margin-top: 5rem;
+                    margin-left: 0;
+                    border-radius: 44% 44% 0 0;
         
-                    p {
-                        margin-top: 2rem;
-                        font-size: 1.6rem;
-                        max-width: 88%;
-                        line-height: 170%;
-                    }
+                    .wrapper {
+                        width: 93vw;
+                        height: 48rem;
         
-                    p.small {
-                        margin-top: 0;
-                        font-size: 1.2rem;
-                    }
-    
-                    // Radio button styling
-                    
-                    label.container {
-                        input {
-                            margin-bottom: 3rem;
-                            height: 3rem; width: 3rem;
+                        h3 {
+                            margin-top: 10rem;
+                            font-size: 2.8rem;
+                        }
+            
+                        p {
+                            margin-top: 2rem;
+                            font-size: 1.6rem;
+                            max-width: 88%;
+                            line-height: 170%;
+                        }
+            
+                        p.small {
+                            margin-top: 0;
+                            font-size: 1.2rem;
+                        }
+        
+                        // Radio button styling
+                        
+                        label.container {
+                            input {
+                                margin-bottom: 3rem;
+                                height: 3rem; width: 3rem;
+                                cursor: pointer;
+                            }   
+                        }
+        
+                        .container {
+                            display: block;
+                            position: relative;
                             cursor: pointer;
-                        }   
-                    }
-    
-                    .container {
-                        display: block;
-                        position: relative;
-                        cursor: pointer;
-                        margin-top: 2rem;
-                        }
-                        
-                        /* Hide the browser's default radio button */
-                        .container input {
-                        // position: absolute;
-                        opacity: 0;
-                        cursor: pointer;
-                        height: 0;
-                        width: 0;
-                        }
-                        
-                        /* Create a custom radio button */
-                        .checkmark {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 3rem;
-                        width: 3rem;
-                        background-color: $pink;
-                        border-radius: 50%;
-                        border: white 1px solid !important;
-                        }
-                        
-                        /* On mouse-over, add a grey background color */
-                    //   .container:hover input ~ .checkmark {
-                    //     background-color: #ccc;
-                    //   }
-                        
-                        /* When the radio button is checked, add a color background */
-                        .container input:checked ~ .checkmark {
-                        background-color: $pink;
-                        }
-                        
-                        /* Create the indicator (the dot/circle - hidden when not checked) */
-                        .checkmark:after {
-                        content: "";
-                        position: absolute;
-                        display: none;
-                        }
-                        
-                        /* Show the indicator (dot/circle) when checked */
-                        .container input:checked ~ .checkmark:after {
-                        display: block;
-                        }
-                        
-                        /* Style the indicator (dot/circle) */
-                        .container .checkmark:after {
-                        top: 9px;
-                        left: 9px;
-                        width: 8px;
-                        height: 8px;
-                        border-radius: 50%;
-                        background: white;
-                        border: white 1px solid !important;
-                        }
-                }
-            }
-    
-            .voucher-electronic {
-                border: black solid 1px;
-                background-color: white;
-    
-                .wrapper {
-                    h3, p {
-                        color: $black-paragraph;
-                    }
-    
-                    .container {
-                        .checkmark {
-                            background-color: white;
+                            margin-top: 2rem;
+                            }
+                            
+                            /* Hide the browser's default radio button */
+                            .container input {
+                            // position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+                            }
+                            
+                            /* Create a custom radio button */
+                            .checkmark {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 3rem;
+                            width: 3rem;
+                            background-color: $pink;
                             border-radius: 50%;
-                            border: black 1px solid !important;
+                            border: white 1px solid !important;
+                            }
+                            
+                            /* On mouse-over, add a grey background color */
+                        //   .container:hover input ~ .checkmark {
+                        //     background-color: #ccc;
+                        //   }
+                            
+                            /* When the radio button is checked, add a color background */
+                            .container input:checked ~ .checkmark {
+                            background-color: $pink;
+                            }
+                            
+                            /* Create the indicator (the dot/circle - hidden when not checked) */
+                            .checkmark:after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                            }
+                            
+                            /* Show the indicator (dot/circle) when checked */
+                            .container input:checked ~ .checkmark:after {
+                            display: block;
+                            }
+                            
+                            /* Style the indicator (dot/circle) */
+                            .container .checkmark:after {
+                            top: 9px;
+                            left: 9px;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background: white;
+                            border: white 1px solid !important;
                             }
                     }
-    
-                    .container .checkmark:after {
-                        background: black;
-                        border: black 1px solid !important;
-                    }
-    
-                    /* When the radio button is checked, add a color background */
-                    .container input:checked ~ .checkmark {
+                }
+        
+                .voucher-electronic {
+                    border: black solid 1px;
                     background-color: white;
+        
+                    .wrapper {
+                        h3, p {
+                            color: $black-paragraph;
+                        }
+        
+                        .container {
+                            .checkmark {
+                                background-color: white;
+                                border-radius: 50%;
+                                border: black 1px solid !important;
+                                }
+                        }
+        
+                        .container .checkmark:after {
+                            background: black;
+                            border: black 1px solid !important;
+                        }
+        
+                        /* When the radio button is checked, add a color background */
+                        .container input:checked ~ .checkmark {
+                        background-color: white;
+                        }
                     }
                 }
             }
+    
+
         }
     }
 

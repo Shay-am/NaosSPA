@@ -33,3 +33,4 @@ counterMinusElem2.addEventListener("click", () => {
   if (counterDisplayElem.value <= 250) return;
   decreasePrice(counterDisplayElem2);
 });
+
