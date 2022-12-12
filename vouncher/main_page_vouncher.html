@@ -92,12 +92,13 @@
 
     <section class="voucher-type">
       <h1>
-        Wybierz rodzaj <br />
+        Wybierz rodzaj <br/>
         VOUCHERA
       </h1>
 
       <div class="wrapper">
-        <div class="shopping-cart cart-items">
+
+        <div class="shopping-cart cart-items" id="shooping-cart-height">
           <div class="heading">
             <i class="fa-solid fa-cart-shopping"></i>
             <h2>KOSZYK</h2>
@@ -137,7 +138,7 @@
           <div class="voucher voucher-electronic">
             <div class="wrapper">
               <h3>
-                Voucher <br />
+                Voucher <br/>
                 elektroniczny
               </h3>
               <p>
@@ -146,17 +147,17 @@
                 zaksięgowaniu wpłaty.
               </p>
               <label for="electronic" class="container">
-                <input type="radio" name="delivery" id="electronic" value="electronic" />
+                <input type="radio" name="delivery" id="electronic" value="electronic"/>
                 <span class="checkmark"></span>
               </label>
             </div>
-           </div>
+          </div>
 
           <div class="voucher voucher-address">
             <div class="wrapper">
               <h3>
-                Voucher z wysyłką <br />
-                na wskazany przez <br />
+                Voucher z wysyłką <br/>
+                na wskazany przez <br/>
                 Ciebie adres
               </h3>
               <p>
@@ -166,12 +167,15 @@
               </p>
               <p class="small">*Od kwoty 400 zł wysyłka gratis</p>
               <label for="normal" class="container">
-                <input type="radio" name="delivery" checked id="normal" value="normal" />
+                <input type="radio" name="delivery" checked id="normal" value="normal"/>
                 <span class="checkmark"></span>
               </label>
             </div>
           </div>
-      </form>
+        </form>
+
+      </div>
+      
     </section>
 
     <section class="voucher-counter">
@@ -201,7 +205,7 @@
             <input type="text" id="name"  />
           </div>
 
-          <a href="#">
+          <a>
             <button id="btn-add-to-cart" class="button">
               <i class="fa-solid fa-cart-shopping"></i> DODAJ DO KOSZYKA
             </button>
@@ -240,8 +244,8 @@
             <input type="text" id="name" />
           </div>
 
-          <a href="#">
-            <button id="btn-add-to-cart-v2" class="button ">
+          <a>
+            <button id="btn-add-to-cart-v2" class="button">
               <i class="fa-solid fa-cart-shopping"></i> DODAJ DO KOSZYKA
             </button>
           </a>

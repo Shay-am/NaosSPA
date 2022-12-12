@@ -180,6 +180,7 @@ const appendOrdersToCartV2 = (name, price, id) => {
 const removedOrders = (e) => {
   CART_STATE = CART_STATE.filter((item) => item.id != e.target.id);
   totalPrice.textContent = calculatePrice();
+  totalPriceV2.textContent = totalPrice.textContent;
   render();
 };
 
